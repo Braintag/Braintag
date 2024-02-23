@@ -11,13 +11,18 @@
         href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
+    <script src="assets/js/menu.js"></script>
 
 </head>
 
 <body>
+    
+    <div class="menu__opacity">
+
     <main></main>
     <header>
-        <button id="botao-hamburguer">☰</button>
+        <button id="botao-hamburguer" onclick="handleMenu()" >☰</button>
+
 
 
         <div class="logo">
@@ -26,21 +31,37 @@
 
         <nav>
             <span>
-                <a href="">Início</a></span>
+                <a href="">Início</a>
+            </span>
             <span>
-                <a href="">Cursos</a></span>
+                <a href="">Cursos</a>
+            </span>
             <span>
-                <a href="">Fale conosco</a></span>
+                <a href="">Fale conosco</a>
+            </span>
             <span>
-                <a href="">Faça parte</a></span>
-            <span>
-                <a href="">Entrar</a></span>
-
+                <a href="">Entrar</a>
+            </span>
         </nav>
 
 
 
     </header>
+
+    <section class="menu" style="display: none">
+        <div class="menu__top">
+            <button onclick="handleMenu()">
+                <img src="assets/img/simbolo-x 1.png" alt="">
+            </button>
+        </div>
+
+        <div class="menu__options">
+            <a href="#">Início</a>
+            <a href="#">Cursos</a>
+            <a href="#">Fale conosco</a>
+            <a href="#" target="">Entrar</a>
+        </div>
+    </section>
 
     <section id="banner">
     </section>
@@ -57,44 +78,149 @@
 
     <section class="card">
 
-            <article>
-                <img src="/assets/img/js.png" alt="">
-                <div>
-                    <p>
-                        Curso de JavaScrip
-                    </p>
-                </div>
-            </article>
-
-            <article>
-                <img src="/assets/img/java 1.png" alt="">
-                <p>
-                    Curso de Java
-                </p>
-            </article>
-        </section>
-
         <article>
-            <img src="/assets/img/Rectangle 88 (1).png" alt="">
-            <div>
-                <p>
-                    Desenvolvimento Web
-                </p>
+            <div class="ig">
+                <img src="/assets/img/js.png" alt="">
+            </div>
+            <div class="sp">
+                <span>
+                    Curso de JavaScrip
+                </span>
             </div>
         </article>
 
         <article>
-            <img src="/assets/img/mysql 1.png   " alt="">
-            <div>
-                <p>
+            <div class="ig">
+                <img src="/assets/img/java 1.png" alt="">
+            </div>
+            <div class="sp">
+                <span>
+                    Curso de Java
+                </span>
+            </div>
+        </article>
+
+        <article>
+            <div class="ig">
+                <img src="/assets/img/Rectangle 88 (1).png" alt="">
+            </div>
+            <div class="sp">
+                <span>
+                    Desenvolvimento Web
+                </span>
+            </div>
+        </article>
+
+        <article>
+            <div class="ig">
+                <img src="/assets/img/mysql 1.png   " alt="">
+            </div>
+            <div class="sp">
+                <span>
                     Curso de MySql
-                </p>
+                </span>
             </div>
         </article>
 
     </section>
 
+
+    <section class="txt">
+        <h2>
+            Estude com a gente!
+        </h2>
+
+        <p>
+            Queremos expandir o conhecimento sobre novas tecnologias e envolve-los no mercado de trabalho, sendo aluno
+            da
+            nossa plataforma terá acesso ás aulas gravadas, materias atualizados e ativadades dinamicas reforçando na
+            prática.
+        </p>
+
+    </section>
+
+
+    <h2>
+        Seguimentos em aula
+    </h2>
+
+    <section id="ff">
+
+        <div class="container">
+
+
+
+            <img src="assets/img/Imagem.png" alt="">
+
+            <h3 class="al">
+                Aulas Gravadas
+            </h3>
+
+            <p>
+                Estude no seu ritmo com as aulas <br>
+                disponibilizadas na plataforma
+            </p>
+
+
+
+        </div>
+
+        <div class="container">
+
+            <img src="assets/img/Imagem (1).png" alt="">
+
+            <h3 class="co">
+                Conteúdo
+            </h3>
+
+            <p>
+                Domine aquilo que é necessário para <br> ser referência no seu mercado de atuação.
+            </p>
+
+
+        </div>
+
+        <div class="container">
+
+            <img src="assets/img/Imagem (2).png" alt="">
+
+            <h3 class="pr">
+                Praticando
+            </h3>
+
+            <p>
+                Saia do campo teórico e descubra <br> como aplicar o conhecimento no seu <br> dia a dia de trabalho.
+            </p>
+
+
+        </div>
+
+
+
+    </section>
+
+    <section class="curso">
+
+        <h2>
+            Acesse agora todos os cursos!
+        </h2>
+
+        <a href="">Cursos</a>
+
+    </section>
+
+
+
+    <footer>
+        <p>
+            © 2023 Braintag - Todos os Direitos Reservados. Desenvolvido com paixão pelo aprendizado.
+
+        </p>
+    </footer>
+
+
     </main>
+</div>
 </body>
 
 </html>
