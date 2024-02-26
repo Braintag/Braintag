@@ -5,7 +5,7 @@ function handleMenu() {
 
     if (menu.style.display == "none") {
         menu.style.display = "block";
-        opacity.style.backgroundColor = "rgba(0, 0, 0, 0.60)";
+        opacity.style.backgroundColor = "red";
         menu.style.zIndex = "10";
     
     } else {

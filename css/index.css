@@ -7,10 +7,12 @@
 :root
 {
 
-    --cor-primaria: white;
-    --cor: #dadde2;
+    --header: white;
+    --text-menu: #dadde2;
 
 }
+
+
 
 nav {
 
@@ -25,9 +27,9 @@ nav {
     left: 0;
     z-index: 4;
 
-    width: 314px;
-    padding: 16px;
-    background-color: var(--header);
+    width: 100%;
+    height: 100%;
+    background-color: #074CB0;
 }
 
 .menu__top {
@@ -35,66 +37,72 @@ nav {
     justify-content: space-between;
 }
 
-.menu__top button {
+.menu__top button  {
     cursor: pointer;
-
     border: none;
     color: var(--text-menu);
     background-color: transparent;
+    padding: 14px;
+
+    
+}
+
+.menu__top button img{
+
+    margin-top: 12px;
+    margin-left: 5px;
+    width: 40px;
+    height: 40px;
+
 }
 
 .menu__options {
     display: flex;
+    align-items: center;
     flex-direction: column;
     gap: 35px;
-    margin-top: 18px;
+    margin-top: 120px;
 }
 
 .menu__options a {
-    font-family: Poppins;
+    font-family: 'Inter';
     font-size: 24px;
     font-weight: 500;
-    padding-left: 3%;
+
     text-decoration: none;
     color: var(--text-menu);
 }
 
-.menu__opacity {
-    position: relative;
-    height: 100%;
-}
 
 
 
 #botao-hamburguer{
     background-color: transparent;
     color: white;
-    position: relative;
-    top: 6px;
-    right: -15px;
-    font-size: 24px;
+    font-size: 46px;
     border: 0;
 
 }
 
-.logo{
+.logo {
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    position: relative;
-    top: -30px;
-    right: -325px;
-    width: 40px;
-    height: 40px;
+
+    width: 60px;
+    height: 60px;
+
 }
 
 header
 {
 
-    height: 03rem ;
+    height: 5rem ;
     background-color: #074CB0;
     border-bottom:  #FAFF00 3px solid ;
+    display: flex;
+    justify-content: space-between;
+    padding: 0% 1rem;
+    align-items: center;
+    
 
 }
 
@@ -184,6 +192,8 @@ article{
     padding: 2%;
     color: white;
     background-color: #303030;
+    margin-top: 22px;
+    margin-bottom: 22px;
 }
 
 .txt h2{
@@ -268,6 +278,7 @@ article{
     color: white;
     font-size: 20px;
     background-color: #303030;
+    margin-top: 50px;
     padding: 4%;
 }
 
@@ -291,3 +302,5 @@ footer{
     background-color: #074CB0;
     color: white;
 }
+
+
