@@ -159,7 +159,7 @@ p {
 
 .card {
 
-    width: 80%;
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -174,7 +174,6 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 20%;
     background: #367EE7;
     border-radius: 10px;
     position: relative;
@@ -373,42 +372,29 @@ footer {
         font-family: 'Inter';
     }
 
-    .ig 
-    {
+
+
+    .ig {
+
+        position: relative;
+        top: 40px;
+    }
+
+    .sp {
+
+        position: relative;
+        top: 50px;
+        text-align: center;
+        border-radius: 7px;
+        width: 280px;
+        height: 59px;
+        background-color: #303030;
+    
+    }
 
     
 
-    }
 
-
-
-    .sp 
-    {
-
-    }
-
-
-
-
-
-    .card 
-    {
-        
-        
-
-    }
-
-    .card article 
-    {
-        
-
-
-    }
-
-    article
-    {
-        
-    }
 
     .txt {
 
@@ -526,4 +512,11 @@ footer {
         border-radius: 10px;
     }
 
+    footer p {
+
+       
+        align-items: center
+        ;
+        font-size: 10px;       
+    }
 }

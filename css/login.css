@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+
+    padding: 2%;
+    align-items: center;
+    text-align: center;
+}
+
+
+.main-login {
+
+    padding: 2%;
+    width: 241px;
+    height: 225px;
+}
