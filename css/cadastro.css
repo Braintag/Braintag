@@ -1,0 +1,166 @@
+body {
+    background-color: #DADDE2;
+}
+
+main h1 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+
+    margin-top: 1rem;
+}
+
+.form-cadastro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 1rem;
+}
+
+.form-cadastro img {
+    width: 60%;
+}
+
+.form-cadastro form {
+    display: flex;
+    flex-direction: column;
+
+    width: 80%;
+    padding: 1.5rem;
+
+    border-radius: 8px;
+
+    background-color: #0E5BCB;
+}
+
+.form-cadastro form strong {
+    font-family: 'Rubik', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1rem;
+    
+    color: #fff;
+}
+
+.form-cadastro form label {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    margin-left: 0.8rem;
+    margin-bottom: 0.4rem;
+
+    color: #fff;
+}
+
+.form-cadastro form input {
+    padding: 0.8rem 0.4rem;
+    margin-bottom: 0.8rem;
+
+    border: 1px solid #555555;
+    border-radius: 8px;
+
+    background-color: #fff;
+}
+
+.form-cadastro form input::placeholder {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+
+    color: #646363;
+}
+
+.form-cadastro form .botao {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-cadastro form button {
+    width: 40%;
+    height: 2rem;
+    margin-top: 1rem;
+
+    border: 1px solid #555555;
+    border-radius: 8px;
+
+    font-size: 1.2rem;
+
+    color: #0E5BCB;
+    background-color: #fff;
+}
+
+.form-cadastro form span{
+    margin-top: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+}
+
+.redirecionar {
+    color: #FAFF00;
+}
+
+@media (min-width: 1024px) {
+    main h1 {
+        font-size: 3rem;
+        text-align: center;
+    
+        margin-top: 2rem;
+    }
+    
+    .form-cadastro img {
+        width: 20%;
+    }
+    
+    .form-cadastro form {
+        display: flex;
+        flex-direction: column;
+    
+        width: 40%;
+        padding: 3rem;
+    
+        border-radius: 8px;
+    
+        background-color: #0E5BCB;
+    }
+    
+    .form-cadastro form strong {
+        font-family: 'Rubik', sans-serif;
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 1rem;
+        
+        color: #fff;
+    }
+    
+    .form-cadastro form label {
+        font-size: 1rem;
+    }
+
+    .form-cadastro form button {
+        width: 30%;
+        height: 2.5rem;
+        cursor: pointer;
+        margin-top: 1rem;
+    
+        border: 1px solid #555555;
+        border-radius: 8px;
+    
+        font-size: 1.2rem;
+    
+        color: #0E5BCB;
+        background-color: #fff;
+    }
+
+    .form-cadastro form span{
+        margin-top: 1rem;
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+    }
+    
+    .redirecionar {
+        color: #FAFF00;
+    }
+}
