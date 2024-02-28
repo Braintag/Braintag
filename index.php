@@ -10,6 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/index.css">
     <script src="assets/js/menu.js"></script>
 
@@ -17,55 +18,13 @@
 
 <body>
     
-
-
-    <header>
-        <button id="botao-hamburguer" onclick="handleMenu()" >☰</button>
-
-
-
-
-            <img class="logo" src="assets/img/logo (1).png" alt="">
-
-        <nav>
-            <span>
-                <a href="">Início</a>
-            </span>
-            <span>
-                <a href="">Cursos</a>
-            </span>
-            <span>
-                <a href="">Fale conosco</a>
-            </span>
-            <span>
-                <a href="">Entrar</a>
-            </span>
-        </nav>
-
-
-
-    </header>
+    <?php
+        include_once('./components/header.php')
+    ?>
 
     <main>
 
-    <section class="menu" style="display: none">
-        <div class="menu__top">
-            <button onclick="handleMenu()">
-                <img src="assets/img/simbolo-x 1.png" alt="">
-            </button>
-        </div>
-
-        <div class="menu__options">
-            <a href="#">Início</a>
-            <a href="#">Cursos</a>
-            <a href="#">Fale conosco</a>
-            <a href="#" target="">Entrar</a>
-        </div>
-    </section>
-
-    <section id="banner">
-    </section>
-
+    <section id="banner"></section>
 
     <h2>
         Conheça alguns dos nossos cursos da BrainTag
@@ -220,15 +179,10 @@
 
 
 </main>
-    <footer>
-        <p>
-            © 2023 Braintag - Todos os Direitos Reservados. Desenvolvido com paixão pelo aprendizado.
 
-        </p>
-    </footer>
-
-
-
+    <?php
+        include_once('./components/footer.php')
+    ?>
 </body>
 
 </html>

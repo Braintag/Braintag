@@ -28,34 +28,9 @@
 
 <body>
     
-
-
-    <header>
-        <button id="botao-hamburguer" onclick="handleMenu()" >☰</button>
-
-
-
-
-            <img class="logo" src="assets/img/logo (1).png" alt="">
-
-        <nav>
-            <span>
-                <a href="">Início</a>
-            </span>
-            <span>
-                <a href="">Cursos</a>
-            </span>
-            <span>
-                <a href="">Fale conosco</a>
-            </span>
-            <span>
-                <a href="">Entrar</a>
-            </span>
-        </nav>
-
-
-
-    </header>
+    <?php
+        include_once('./components/header.php')
+    ?>
 
     <main>
 
@@ -157,12 +132,9 @@
         </section>
     </main>
 
-    <footer>
-        <p>
-            © 2023 Braintag - Todos os Direitos Reservados. Desenvolvido com paixão pelo aprendizado.
-
-        </p>
-    </footer>
+    <?php
+        include_once('./components/footer.php')
+    ?>
 
 
 </body>
