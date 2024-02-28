@@ -1,15 +1,20 @@
+
+:root {
+
+    --header: #0E5BCB ;
+    --body: #949494;
+    --amarelo: #FAFF00 ;
+    --azul-aulas: #367EE7;
+    --cinza-card: #383838;
+    --branco: #FFFFFF;
+    --preto: #000000;
+
+}
+
 * {
     margin: 0;
     padding: 0;
 }
-
-:root {
-
-    --header: white;
-    --text-menu: #dadde2;
-
-}
-
 
 
 nav {
@@ -68,7 +73,7 @@ nav {
     font-weight: 500;
 
     text-decoration: none;
-    color: var(--text-menu);
+    color: var(--branco);
 }
 
 
@@ -347,7 +352,7 @@ footer {
     }
 
     h2 {
-        font-size: 48px;
+        font-size: 24px;
         padding: 2%;
         font-family: 'Rubik';
     }
@@ -365,7 +370,7 @@ footer {
 
     p {
 
-        font-size: 28px;
+        font-size: 20px;
         padding: 2%;
         display: flex;
         flex-direction: row;
@@ -398,7 +403,7 @@ footer {
 
     .txt {
 
-        font-size: 48px;
+        font-size: 20px;
         padding: 2%;
         color: white;
         background-color: #303030;
@@ -408,12 +413,12 @@ footer {
 
     .txt h2 {
 
-        font-size: 48px;
+        font-size: 24px;
     }
 
     .txt p {
 
-        font-size: 28px;
+        font-size: 20px;
     }
 
     #ff {
@@ -444,6 +449,8 @@ footer {
         text-align: left;
         color: white;
         width: 450px;
+        position: relative;
+        left: 60px;
 
     }
 
@@ -458,7 +465,7 @@ footer {
     .pr {
 
         position: relative;
-        left: -145px;
+        left: -85px;
         font-family: 'Rubik';
         color: white;
         font-size: 26px;
@@ -468,7 +475,7 @@ footer {
     .co {
 
         position: relative;
-        left: -150px;
+        left: -90px;
         font-family: 'Rubik';
         color: white;
         font-size: 26px;
@@ -479,7 +486,7 @@ footer {
     .al {
 
         position: relative;
-        left: -118px;
+        left: -50px;
         font-family: 'Rubik';
         color: white;
         font-size: 26px;
@@ -506,7 +513,7 @@ footer {
         color: #000;
         text-decoration: none;
         font-family: 'Rubik';
-        font-size: 20;
+        font-size: 14;
         background-color: #FAFF00;
         width: 10%;
         border-radius: 10px;
@@ -514,7 +521,7 @@ footer {
 
     footer p {
 
-       
+    
         align-items: center
         ;
         font-size: 10px;       

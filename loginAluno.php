@@ -20,23 +20,23 @@
         href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
 
-        <link rel="stylesheet" href="css/login.css">    
-    <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/login.css">
     <script src="assets/js/menu.js"></script>
 
 </head>
 
 <body>
-    
+
 
 
     <header>
-        <button id="botao-hamburguer" onclick="handleMenu()" >☰</button>
+        <button id="botao-hamburguer" onclick="handleMenu()">☰</button>
 
 
 
 
-            <img class="logo" src="assets/img/logo (1).png" alt="">
+        <img class="logo" src="assets/img/logo (1).png" alt="">
 
         <nav>
             <span>
@@ -59,57 +59,64 @@
 
     <main>
 
-    <section class="menu" style="display: none">
-        <div class="menu__top">
-            <button onclick="handleMenu()">
-                <img src="assets/img/simbolo-x 1.png" alt="">
-            </button>
-        </div>
-
-        <div class="menu__options">
-            <a href="#">Início</a>
-            <a href="#">Cursos</a>
-            <a href="#">Fale conosco</a>
-            <a href="#" target="">Entrar</a>
-        </div>
-    </section>
-
-    <main>
-        <section>
-
-
-
-            <h1>Faça o seu Login</h1>
-
-            <div class = "main-login">
-            <img src="assets/img/login.svg" alt="">
+        <section class="menu" style="display: none">
+            <div class="menu__top">
+                <button onclick="handleMenu()">
+                    <img src="assets/img/simbolo-x 1.png" alt="">
+                </button>
             </div>
 
-            <section id="poost">
-                <form method="POST">
-
-                    <label>E-mail:</label>
-                    <input type="text" name="email" minlength="3" required
-                        placeholder="Informe seu e-mail de cadastro"><br><br>
-
-                    <label>Senha:</label>
-                    <input type="password" name="senha" minlength="3" required placeholder="Informe sua senha"><br><br>
-
-                    <button type="submit" name="inserir">Entrar</button>
-                
-                <div class="form-lembrar">
-                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                <label class="form-check-label" for="invalidCheck">
-                Lembrar minha senha
-                </label>
+            <div class="menu__options">
+                <a href="#">Início</a>
+                <a href="#">Cursos</a>
+                <a href="#">Fale conosco</a>
+                <a href="#" target="">Entrar</a>
             </div>
+        </section>
 
-                    <section class="aaa">
-                        <a href="../php/formUser.php">Nao tem cadastro? Cadastre-se aqui.</a>
-                    </section>
+        <main>
+            <section>
+
+                <section id="poost">
+                    <form method="POST">
+
+                        <div class="main-login">
+                            <h1>
+                                Faça seu Login
+                            </h1>
+
+                            <img src="assets/img/login.svg" alt="">
+
+                            <div class="card-login">
+
+                                <h2>
+                                    LOGIN
+                                </h2>
+
+                                <div class="text--field">
+                                    <label for="usuario">E-mail:</label>
+                                    <input class="in" type="text" name="Usuário" placeholder="Insira seu e-mail">
+                                </div>
+                                <div class="text--field">
+                                    <label for="senha">Senha:</label>
+                                    <input class="in" type="password" name="Senha" placeholder=" Insira sua senha">
+                                </div>
+                                <div class="form-lembrar">
+                                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                    <label class="form-check-label" for="invalidCheck">
+                                    Lembrar da senha
+                                    </label>
+                                </div>
+
+                                <button class="btn-login">Entrar</button>
+                            </div>
+
+                            <section class="aaa">
+                                <span class ='po'>Ainda não tem cadastro?</span> <a class='cq' href="">Clique aqui</a>
+                            </section>
 
 
-                    <?php
+                            <?php
 
                             //if(isset($_REQUEST["inserir"]))
                             //{
@@ -150,19 +157,19 @@
                 
                         ?>
 
-                </form>
+                    </form>
 
 
+                </section>
             </section>
-        </section>
-    </main>
+        </main>
 
-    <footer>
-        <p>
+        <footer>
+            <p>
             © 2023 Braintag - Todos os Direitos Reservados. Desenvolvido com paixão pelo aprendizado.
 
-        </p>
-    </footer>
+            </p>
+        </footer>
 
 
 </body>
