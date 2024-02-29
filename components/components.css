@@ -1,25 +1,37 @@
-.logos {
-    width: 4rem;
-    height: 4rem;
-}
-
 header {
-    height: 5rem;
-    background-color: var(--azul-primario);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
+    height: 5rem;
+
+    background-color: var(--blue-primary);
 }
 
-header div {
+#button-hamburger {
+    font-size: 3rem;
+    border: none;
+    color: var(--white-text);
+    background-color: transparent;
+}
+
+#logo {
+    width: 4rem;
+    height: 4rem;
+}
+
+.header-internal {
     display: flex;
     justify-content: space-between;
+
     width: 100%;
+    height: 100%;
+
     padding: 0 0.8rem;
 }
 
-header nav {
+.header-internal nav {
     display: none;
 }
 
@@ -27,7 +39,7 @@ header hr {
     width: 100%;
     height: 2px;
     margin-bottom: 0.2rem;
-    background-color: #FAFF00;
+    background-color: var(--yellow-primary);
 }
 
 .menu {
@@ -38,87 +50,91 @@ header hr {
 
     width: 100%;
     height: 100%;
-    background-color: #074CB0;
+    background-color: var(--blue-primary);
 }
 
-.menu__top {
-    display: flex;
-    justify-content: space-between;
-}
-
-.menu__top button {
+.menu button {
     cursor: pointer;
     border: none;
-    color: var(--text-menu);
+    padding: 0.8rem;
+
     background-color: transparent;
-    padding: 14px;
 }
 
-.menu__top button img {
-
-    margin-top: 12px;
-    margin-left: 5px;
-    width: 40px;
-    height: 40px;
-
+.menu button img {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0.5rem 0.3rem;
 }
 
-.menu__options {
+.menu-options {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 35px;
-    margin-top: 120px;
+    gap: 4rem;
+    
+    margin-top: 7.5rem;
 }
 
-.menu__options a {
-    font-family: 'Inter';
-    font-size: 24px;
-    font-weight: 500;
+.menu-options a {
+    font-family: var(--font-primary);
+    font-size: 2.25rem;
+    font-weight: 600;
+    letter-spacing: 2px;
 
     text-decoration: none;
-    color: var(--text-menu);
+    color: var(--white-text);
 }
 
-#botao-hamburguer {
-    background-color: transparent;
-    color: white;
-    font-size: 46px;
-    border: 0;
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    height: 3rem;
+    padding: 0 2rem;
+    background-color: var(--blue-primary);
 }
 
 footer p {
-    align-items: center;
-    font-size: 10px;       
+    font-size: 0.75rem;       
 }
 
 @media (min-width: 1280px) {
-    #botao-hamburguer {
+    #button-hamburger {
         display: none;
     }
 
     header {
         height: 7rem;
-        background-color: #074CB0;
-        border-bottom: #FAFF00 3px solid;
-        display: flex;
-        justify-content: space-between;
-        padding: 0% 1rem;
-        align-items: center;
     }
 
-    nav {
+    #logo {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .header-internal {
+        align-items: center;
+        padding: 0 2rem;
+    }
+
+    .header-internal nav {
         display: flex;
         flex-direction: row;
-        gap: 30px;
-        margin-right: 95px;
+        gap: 4rem;
     }
 
-    nav a {
-        color: var(--text-menu);
+    .header-internal nav a {
+        font-size: 2rem;
+        font-family: var(--font-primary);
         text-decoration: none;
-        font-size: 36px;
-        font-family: 'Rubik';
+
+        color: var(--white-text);
+    }
+
+    header hr {
+        height: 4px;
+        margin-bottom: 0.4rem;
     }
 }

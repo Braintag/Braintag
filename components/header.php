@@ -3,32 +3,30 @@
 <script src="./assets/js/menu.js"></script>
 
 <header>
-    <div>
-        <button id="botao-hamburguer" onclick="handleMenu()" >☰</button>
-        <img class="logos" src="assets/img/logo.png" alt="">
+    <div class='header-internal'>
+        <button id="button-hamburger" onclick="handleMenu()" >☰</button>
+        <img id="logo" src="assets/img/logo.png" alt="">
         
         <nav>
-            <a href="index.php">Início</a>
+            <a href="./index.php">Home</a>
             <a href="#">Cursos</a>
             <a href="#">Fale conosco</a>
-            <a href="login.php">Entrar</a>
+            <a href="./login.php">Entrar</a>
         </nav>
     </div>
 
     <hr />
 
     <section class="menu" style="display: none">
-        <div class="menu__top">
-            <button onclick="handleMenu()">
-                <img src="assets/img/fechar.png" alt="">
-            </button>
-        </div>
+        <button onclick="handleMenu()">
+            <img src="assets/img/fechar.png" alt="">
+        </button>
 
-        <div class="menu__options">
-            <a href="#">Início</a>
+        <div class="menu-options">
+            <a href="./index.php">Home</a>
             <a href="#">Cursos</a>
             <a href="#">Fale conosco</a>
-            <a href="#" target="">Entrar</a>
+            <a href="./login.php">Entrar</a>
         </div>
     </section>
 </header>

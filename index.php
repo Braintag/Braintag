@@ -26,9 +26,7 @@
 
     <section id="banner"></section>
 
-    <h2>
-        Conheça alguns dos nossos cursos da BrainTag
-    </h2>
+    <h2>Conheça alguns dos nossos cursos da BrainTag</h2>
 
     <p>
         Independente da sua escolha, o seu conhecimento sobre tecnologia vai além.
