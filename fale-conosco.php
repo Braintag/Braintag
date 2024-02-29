@@ -1,62 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrainTag</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/fale-conosco.css">
-
     <script src="assets/js/menu.js"></script>
 
-    <title>Cadastro</title>
 </head>
 <body>
-    <header>
-        <button id="botao-hamburguer" onclick="handleMenu()" >☰</button>
-            <img class="logo" src="assets/img/logo (1).png" alt="">
+    
+<?php
+        include_once('./components/header.php')
+        ?>
+        <main>
+            <h1>Fale Conosco</h1>
 
-            <nav>
-                <span>
-                    <a href="index.html">Início</a>
-                </span>
-                <span>
-                    <a href="#">Cursos</a>
-                </span>
-                <span>
-                    <a href="#">Fale conosco</a>
-                </span>
-                <span>
-                    <a href="loginAluno.php">Entrar</a>
-                </span>
-            </nav>
-
-            <section class="menu" style="display: none">
-                <div class="menu__top">
-                    <button onclick="handleMenu()">
-                        <img src="assets/img/simbolo-x 1.png" alt="">
-                    </button>
-                </div>
-
-                <div class="menu__options">
-                    <a href="#">Início</a>
-                    <a href="#">Cursos</a>
-                    <a href="#">Fale conosco</a>
-                    <a href="#" target="">Entrar</a>
-                </div>
-        </section>
-    </header>
-
-    <main>
-        <h1>Faça seu cadastro</h1>
-
-        <div class="form-cadastro">
-            <img src="assets/img/cadastro.svg" alt="">
+            <img src="assets/img/contato.svg" alt="">
+        <div class="form-fale-conosco">
 
             <form method="POST">
-                <strong>Cadastre-se</strong>
+            <strong>Entre em contato</strong> 
 
                 <label>Nome</label>
                 <input type="text" name="nome" minlength="3" required placeholder="Insira o seu nome completo">
@@ -64,17 +35,16 @@
                 <label>Email</label>
                 <input type="email" name="email" required placeholder="Insira o seu email">
 
-                <label>Senha</label>
-                <input type="password" name="senha" minlength="5" required placeholder="Insira a sua senha">
+                <label>Assunto</label>
+                <input type="text" name="assunto" minlength="5" required placeholder="Insira o assunto">
 
-                <label>Confirmar Senha</label>
-                <input type="password" name="confirmar-senha" minlength="5" required placeholder="Insira a sua senha novamente">
+                <label>Mensagem</label>
+                <input type="text" name="Mensagem" minlength="5" required placeholder="Insira a sua mensagem">
 
                 <section class='botao'>
-                    <button type="submit" name="inserir">Cadastrar</button>
+                    <button type="submit" name="inserir">Enviar</button>
                 </section>
                 
-                <span>Já tem uma conta? <a href='loginaluno.php' class='redirecionar' >Entrar</a></span>
 
             <?php
                 //if(isset($_REQUEST["inserir"]))
@@ -116,9 +86,18 @@
             </form>
         </div>
     </main>
-
-    <footer>
-        <p>© 2023 Braintag - Todos os Direitos Reservados. Desenvolvido com paixão pelo aprendizado.</p>
-    </footer>
+    <div class="suport-fale-conosco">
+                <h1>Central de atendimento</h1>
+                <h2>(Seg á sex das 8h ás 18h)</h2>
+        <div class="suport-fale-conosco2">
+                <img src="assets/img/Telefone.png" alt="">
+                <p>(13)99622-9144</p>
+                <img src="assets/img/email.png" alt="">
+                <p>suporte@braintag.com.br</p>
+        </div>
+    </div>
+    
+<?php
+        include_once('./components/footer.php')
+?>
 </body>
-</html>
