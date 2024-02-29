@@ -1,5 +1,5 @@
 <?php
-    include_once("class/aluno.php");
+    include_once("class/Aluno.php");
     error_reporting(0);
 ?>
 
@@ -20,8 +20,8 @@
         href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
 
-        <link rel="stylesheet" href="css/login.css">    
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/login.css">    
     <script src="assets/js/menu.js"></script>
 
 </head>
@@ -31,23 +31,6 @@
     <?php
         include_once('./components/header.php')
     ?>
-
-    <main>
-
-    <section class="menu" style="display: none">
-        <div class="menu__top">
-            <button onclick="handleMenu()">
-                <img src="assets/img/simbolo-x 1.png" alt="">
-            </button>
-        </div>
-
-        <div class="menu__options">
-            <a href="#">Início</a>
-            <a href="#">Cursos</a>
-            <a href="#">Fale conosco</a>
-            <a href="#" target="">Entrar</a>
-        </div>
-    </section>
 
     <main>
         <section>
@@ -80,7 +63,7 @@
             </div>
 
                     <section class="aaa">
-                        <a href="../php/formUser.php">Nao tem cadastro? Cadastre-se aqui.</a>
+                        <span>Ainda não tem cadastro?<a href="../php/formUser.php">Clique aqui</a></span>
                     </section>
 
 
