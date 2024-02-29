@@ -23,160 +23,100 @@
     ?>
 
     <main>
+        <section id="banner"></section>
 
-    <section id="banner"></section>
-
-    <h2>Conheça alguns dos nossos cursos da BrainTag</h2>
-
-    <p>
-        Independente da sua escolha, o seu conhecimento sobre tecnologia vai além.
-    </p>
+        <section class='introduction'>
+            <h2>Conheça alguns dos nossos cursos da Braintag</h2>
+            <p>Independente da sua escolha, o seu conhecimento sobre tecnologia vai além.</p>
+        </section>
 
 
-    <section class="card">
-
-        <div class="container-flex">
-        <article>
-            <div class="ig">
-                <img src="/assets/img/js.png" alt="">
+        <section class="cards-course-simple">
+            <div class="card-course-simple">
+                <article>
+                    <div class="image-course-simple">
+                        <img src="/assets/img/js.png" alt="">
+                    </div>
+                    <div class="name-course-simple">
+                        <span>Curso de JavaScript</span>
+                    </div>
+                </article>
             </div>
-            <div class="sp">
-                <span>
-                    Curso de JavaScrip
-                </span>
+
+            <div class="card-course-simple">
+                <article>
+                    <div class="image-course-simple">
+                        <img src="/assets/img/java.png" alt="">
+                    </div>
+                    <div class="name-course-simple">
+                        <span>Curso de Java</span>
+                    </div>
+                </article>
             </div>
-        </article>
-    </div>
 
-    <div class="container-flex">
-        <article>
-            <div class="ig">
-                <img src="/assets/img/java 1.png" alt="">
+            <div class="card-course-simple">
+                <article>
+                    <div class="image-course-simple">
+                        <img src="/assets/img/desenvolvimento-web.png" alt="">
+                    </div>
+                    <div class="name-course-simple">
+                        <span>Desenvolvimento Web</span>
+                    </div>
+                </article>
             </div>
-            <div class="sp">
-                <span>
-                    Curso de Java
-                </span>
+
+            <div class="card-course-simple">
+                <article>
+                    <div class="image-course-simple">
+                        <img src="/assets/img/mysql.png" alt="">
+                    </div>
+                    <div class="name-course-simple">
+                        <span>Curso de MySql</span>
+                    </div>
+                </article>
             </div>
-        </article>
-    </div>
 
-    <div class="container-flex">
-        <article>
-            <div class="ig">
-                <img src="/assets/img/Rectangle 88 (1).png" alt="">
+        </section>
+
+        <section class="txt">
+            <h2>Estude com a gente!</h2>
+
+            <p>Queremos expandir o conhecimento sobre novas tecnologias e envolve-los no mercado de trabalho, sendo aluno da nossa plataforma terá acesso ás aulas gravadas, materias atualizados e ativadades dinamicas reforçando na prática.</p>
+        </section>
+
+        <h2>Seguimentos em aula</h2>
+
+        <section>
+            <div class="container">
+                <img src="assets/img/Imagem.png" alt="">
+
+                <h3 class="al">Aulas Gravadas</h3>
+
+                <p>Estude no seu ritmo com as aulas  disponibilizadas na nossa plataforma a qualquer momento</p>
             </div>
-            <div class="sp">
-                <span>
-                    Desenvolvimento Web
-                </span>
+
+            <div class="container">
+                <img src="assets/img/Imagem (1).png" alt="">
+
+                <h3 class="co"> Conteúdo</h3>
+
+                <p>Domine aquilo que é necessário para ser referência no seu mercado de atuação.</p>
             </div>
-        </article>
-    </div>
 
-    <div class="container-flex">
-        <article>
-            <div class="ig">
-                <img src="/assets/img/mysql 1.png   " alt="">
+            <div class="container">
+                <img src="assets/img/Imagem (2).png" alt="">
+
+                <h3 class="pr">Praticando</h3>
+
+                <p>Saia do campo teórico e descubra como aplicar o conhecimento no seu dia a dia de trabalho.</p>
             </div>
-            <div class="sp">
-                <span>
-                    Curso de MySql
-                </span>
-            </div>
-        </article>
-    </div>
+        </section>
 
-    </section>
-
-
-    <section class="txt">
-        <h2>
-            Estude com a gente!
-        </h2>
-
-        <p>
-            Queremos expandir o conhecimento sobre novas tecnologias e envolve-los no mercado de trabalho, sendo aluno
-            da
-            nossa plataforma terá acesso ás aulas gravadas, materias atualizados e ativadades dinamicas reforçando na
-            prática.
-        </p>
-
-    </section>
-
-
-    <h2>
-        Seguimentos em aula
-    </h2>
-
-    <section id="ff">
-
-        <div class="container">
-
-
-
-            <img src="assets/img/Imagem.png" alt="">
-
-            <h3 class="al">
-                Aulas Gravadas
-            </h3>
-
-            <p>
-            
-            Estude no seu ritmo com <br> as aulas 
-            disponibilizadas <br>  na nossa plataforma a <br> qualquer momento
-            </p>
-
-
-
-        </div>
-
-        <div class="container">
-
-            <img src="assets/img/Imagem (1).png" alt="">
-
-            <h3 class="co">
-                Conteúdo
-            </h3>
-
-            <p>
-                Domine aquilo que é <br> necessário para ser <br> referência no seu <br> mercado de atuação.
-            </p>
-
-
-        </div>
-
-        <div class="container">
-
-            <img src="assets/img/Imagem (2).png" alt="">
-
-            <h3 class="pr">
-                Praticando
-            </h3>
-
-            <p>
-                Saia do campo teórico e <br> descubra como aplicar o <br> conhecimento no seu <br> dia a dia de trabalho.
-            </p>
-
-
-        </div>
-
-
-
-    </section>
-
-    <section class="curso">
-
-        <h2>
-            Acesse agora todos os cursos!
-        </h2>
-
-        <a href="">Cursos</a>
-
-    </section>
-
-
-</main>
+        <section class="curso">
+            <h2>Acesse agora todos os cursos!</h2>
+            <a href="">Cursos</a>
+        </section>
+    </main>
 
     <?php
         include_once('./components/footer.php')

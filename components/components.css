@@ -97,6 +97,7 @@ footer {
 }
 
 footer p {
+    font-family: var(--font-primary);
     font-size: 0.75rem;       
 }
 
