@@ -200,13 +200,6 @@
     color: var(--black-text);
 }
 
-footer {
-    text-align: center;
-    font-size: 15px;
-    background-color: #074CB0;
-    color: white;
-}
-
 @media (min-width: 700px) {
     #banner {
         height: 15rem;

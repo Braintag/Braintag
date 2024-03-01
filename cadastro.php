@@ -1,58 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <title>BrainTag - Cadastro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/cadastro.css">
-
     <script src="assets/js/menu.js"></script>
-
-    <title>Cadastro</title>
 </head>
 <body>
-    <header>
-        <button id="botao-hamburguer" onclick="handleMenu()" >☰</button>
-            <img class="logo" src="assets/img/logo (1).png" alt="">
-
-            <nav>
-                <span>
-                    <a href="index.html">Início</a>
-                </span>
-                <span>
-                    <a href="#">Cursos</a>
-                </span>
-                <span>
-                    <a href="#">Fale conosco</a>
-                </span>
-                <span>
-                    <a href="loginAluno.php">Entrar</a>
-                </span>
-            </nav>
-
-            <section class="menu" style="display: none">
-                <div class="menu__top">
-                    <button onclick="handleMenu()">
-                        <img src="assets/img/simbolo-x 1.png" alt="">
-                    </button>
-                </div>
-
-                <div class="menu__options">
-                    <a href="#">Início</a>
-                    <a href="#">Cursos</a>
-                    <a href="#">Fale conosco</a>
-                    <a href="#" target="">Entrar</a>
-                </div>
-        </section>
-    </header>
+    <?php
+        include_once('./components/header.php')
+    ?>
 
     <main>
         <h1>Faça seu cadastro</h1>
 
-        <div class="form-cadastro">
+        <section class="form-cadastro">
             <img src="assets/img/cadastro.svg" alt="">
 
             <form method="POST">
@@ -74,7 +48,7 @@
                     <button type="submit" name="inserir">Cadastrar</button>
                 </section>
                 
-                <span>Já tem uma conta? <a href='loginaluno.php' class='redirecionar' >Entrar</a></span>
+                <span>Já tem uma conta? <a href='login.php' class='redirecionar' >Entrar</a></span>
 
             <?php
                 //if(isset($_REQUEST["inserir"]))
@@ -114,11 +88,11 @@
                 }
                 ?>
             </form>
-        </div>
+        </section>
     </main>
 
-    <footer>
-        <p>© 2023 Braintag - Todos os Direitos Reservados. Desenvolvido com paixão pelo aprendizado.</p>
-    </footer>
+    <?php
+        include_once('./components/footer.php')
+    ?>
 </body>
 </html>
