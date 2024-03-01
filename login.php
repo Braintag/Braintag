@@ -27,6 +27,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
 <<<<<<< HEAD:loginAluno.php
 
 
@@ -60,12 +61,18 @@
 =======
     
     <?php
+=======
+
+    <?php 
+>>>>>>> e5965c205cfb4c973b35fa9d11f0abadd26b684c
         include_once('./components/header.php')
     ?>
 >>>>>>> 2bf1aeed1d99ec465fc969c9eb99efc465e92d6a:login.php
 
-    <main>
+        <main>
+            <section>
 
+<<<<<<< HEAD
         <section class="menu" style="display: none">
             <div class="menu__top">
                 <button onclick="handleMenu()">
@@ -84,6 +91,8 @@
         <main>
             <section>
 
+=======
+>>>>>>> e5965c205cfb4c973b35fa9d11f0abadd26b684c
                 <section id="poost">
                     <form method="POST">
 
@@ -170,6 +179,7 @@
                 </section>
             </section>
         </main>
+<<<<<<< HEAD
 
 <<<<<<< HEAD:loginAluno.php
         <footer>
@@ -184,7 +194,12 @@
     ?>
 >>>>>>> 2bf1aeed1d99ec465fc969c9eb99efc465e92d6a:login.php
 
+=======
+>>>>>>> e5965c205cfb4c973b35fa9d11f0abadd26b684c
 
+        <?php 
+            include_once('./components/footer.php')
+        ?>
 </body>
 
 </html>

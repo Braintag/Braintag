@@ -25,7 +25,7 @@
     <main>
         <section id="banner"></section>
 
-        <section class='introduction'>
+        <section class='introduction-home'>
             <h2>Conheça alguns dos nossos cursos da Braintag</h2>
             <p>Independente da sua escolha, o seu conhecimento sobre tecnologia vai além.</p>
         </section>
@@ -35,7 +35,7 @@
             <div class="card-course-simple">
                 <article>
                     <div class="image-course-simple">
-                        <img src="/assets/img/js.png" alt="">
+                        <img src="./assets/img/js.png" alt="Imagem remetente ao curso de JavaScript">
                     </div>
                     <div class="name-course-simple">
                         <span>Curso de JavaScript</span>
@@ -46,7 +46,7 @@
             <div class="card-course-simple">
                 <article>
                     <div class="image-course-simple">
-                        <img src="/assets/img/java.png" alt="">
+                        <img src="./assets/img/java.png" alt="Imagem remetente ao curso de Java">
                     </div>
                     <div class="name-course-simple">
                         <span>Curso de Java</span>
@@ -57,7 +57,7 @@
             <div class="card-course-simple">
                 <article>
                     <div class="image-course-simple">
-                        <img src="/assets/img/desenvolvimento-web.png" alt="">
+                        <img src="./assets/img/desenvolvimento-web.png" alt="Imagem remetente ao curso de Desenvolvimento Web">
                     </div>
                     <div class="name-course-simple">
                         <span>Desenvolvimento Web</span>
@@ -68,7 +68,7 @@
             <div class="card-course-simple">
                 <article>
                     <div class="image-course-simple">
-                        <img src="/assets/img/mysql.png" alt="">
+                        <img src="./assets/img/mysql.png" alt="Imagem remetente ao curso de MySql">
                     </div>
                     <div class="name-course-simple">
                         <span>Curso de MySql</span>
@@ -78,43 +78,50 @@
 
         </section>
 
-        <section class="txt">
+        <section class="study-home">
             <h2>Estude com a gente!</h2>
 
-            <p>Queremos expandir o conhecimento sobre novas tecnologias e envolve-los no mercado de trabalho, sendo aluno da nossa plataforma terá acesso ás aulas gravadas, materias atualizados e ativadades dinamicas reforçando na prática.</p>
+            <p>Estamos empenhados em ampliar o conhecimento sobre as mais recentes tecnologias e integrá-las ao mercado de trabalho. Como aluno de nossa plataforma, você terá acesso a uma ampla gama de recursos educacionais projetados para capacitar e prepará-lo para os desafios do mundo profissional moderno.</p>
+
+            <p> Nossa plataforma oferece aulas gravadas ministradas por especialistas de renome, que compartilham seu conhecimento e experiência de forma acessível e envolvente. Além disso, atualizamos constantemente nosso material didático para garantir que você tenha acesso às informações mais recentes e relevantes.</p>
+
+            <p>Acreditamos na importância da aprendizagem prática, por isso oferecemos uma variedade de atividades dinâmicas que permitem que você aplique o que aprendeu em situações do mundo real. Essas atividades são projetadas para desafiar e desenvolver suas habilidades, preparando-o para enfrentar os desafios do mercado de trabalho com confiança e competência.</p>
         </section>
 
-        <h2>Seguimentos em aula</h2>
-
-        <section>
-            <div class="container">
-                <img src="assets/img/Imagem.png" alt="">
-
-                <h3 class="al">Aulas Gravadas</h3>
-
-                <p>Estude no seu ritmo com as aulas  disponibilizadas na nossa plataforma a qualquer momento</p>
-            </div>
-
-            <div class="container">
-                <img src="assets/img/Imagem (1).png" alt="">
-
-                <h3 class="co"> Conteúdo</h3>
-
-                <p>Domine aquilo que é necessário para ser referência no seu mercado de atuação.</p>
-            </div>
-
-            <div class="container">
-                <img src="assets/img/Imagem (2).png" alt="">
-
-                <h3 class="pr">Praticando</h3>
-
-                <p>Saia do campo teórico e descubra como aplicar o conhecimento no seu dia a dia de trabalho.</p>
+        
+        <section class="class-home">
+            <h2>Seguimentos em aula</h2>
+            
+            <div>   
+                <article class="card-class-home">
+                    <img src="assets/img/aulas-gravadas.png" alt="">
+                    
+                    <h3>Aulas Gravadas</h3>
+                    
+                    <p>Estude no seu ritmo com as aulas  disponibilizadas na nossa plataforma a qualquer momento</p>
+                </article>
+                
+                <article class="card-class-home">
+                    <img src="assets/img/conteudo.png" alt="">
+                    
+                    <h3>Conteúdo</h3>
+                    
+                    <p>Domine aquilo que é necessário para ser referência no seu mercado de atuação.</p>
+                </article>
+                
+                <article class="card-class-home">
+                    <img src="assets/img/praticando.png" alt="">
+                    
+                    <h3>Praticando</h3>
+                    
+                    <p>Saia do campo teórico e descubra como aplicar o conhecimento no seu dia a dia de trabalho.</p>
+                </article>
             </div>
         </section>
 
-        <section class="curso">
+        <section class="course-home">
             <h2>Acesse agora todos os cursos!</h2>
-            <a href="">Cursos</a>
+            <a href="./cursos.php">Cursos</a>
         </section>
     </main>
 

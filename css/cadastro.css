@@ -31,7 +31,7 @@ main h1 {
     width: 80%;
     padding: 1.5rem;
 
-    border-radius: 8px;
+    border-radius: var(--border);
 
     background-color: #0E5BCB;
 }
@@ -60,7 +60,7 @@ main h1 {
     margin-bottom: 0.8rem;
 
     border: 1px solid #555555;
-    border-radius: 8px;
+    border-radius: var(--border);
 
     background-color: #fff;
 }
@@ -83,7 +83,7 @@ main h1 {
     margin-top: 1rem;
 
     border: 1px solid #555555;
-    border-radius: 8px;
+    border-radius: var(--border);
 
     font-size: 1.2rem;
 
@@ -120,7 +120,7 @@ main h1 {
         width: 40%;
         padding: 3rem;
     
-        border-radius: 8px;
+        border-radius: var(--border);
     
         background-color: #0E5BCB;
     }
@@ -146,7 +146,7 @@ main h1 {
         margin-top: 1rem;
     
         border: 1px solid #555555;
-        border-radius: 8px;
+        border-radius: var(--border);
     
         font-size: 1.2rem;
     
