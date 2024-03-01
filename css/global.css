@@ -8,14 +8,17 @@
     --blue-primary: #2644D5;
     --blue-secondary: #367EE7;
     --yellow-primary: #FAFF00;
-    --white-transparent: #D2D2D2;
-
+    --white-transparent: #d2d2d280;
+    
     --bg-white: #dadde2;
     --bg-card: #303030;
     --bg-disabled: #30303080;
+    
+    --border-input: #555555;
     --border: 8px;
-
+    
     --white-text: #FFFFFF;
+    --cyan-text: #555555;
     --black-text: #000000;
 
     --font-primary: 'Rubik', sans-serif;
@@ -24,4 +27,13 @@
 
 body {
     background-color: var(--bg-white);
+    font-family: var(--font-secondary);
+}
+
+h1, h2, h3, strong {
+    font-family: (--font-primary)
+}
+
+.redirecionar {
+    color: #FAFF00;
 }
