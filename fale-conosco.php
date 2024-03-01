@@ -23,8 +23,8 @@
         <main>
             <h1>Fale Conosco</h1>
 
+            <div class="form-fale-conosco">
             <img src="assets/img/contato.svg" alt="">
-        <div class="form-fale-conosco">
 
             <form method="POST">
             <strong>Entre em contato</strong> 
@@ -46,52 +46,20 @@
                 </section>
                 
 
-            <?php
-                //if(isset($_REQUEST["inserir"]))
-                //{
-                    //$u = new User();
-
-                    //if ($u->autenticarUsuario($_REQUEST["email"],$_REQUEST["senha"]) == 0)
-                    //{
-                        // echo "<p>E-mail e/ou senha incorreto(s)!</p>";                   
-                    //}
-                    //else 
-                    //{
-                        //session_start();
-                        //$_SESSION["nome"] = $u->getNome();
-                        //header("Location: ../php/void.php"); //*redirecionando para outra página
-                    //}
-                //}
-
-                if (isset($_REQUEST["inserir"]))
-                {
-                    $u = new User();
-    
-                    if ($u->autenticarUsuario($_REQUEST["email"], $_REQUEST["senha"]) == 0)
-                    {
-                        echo "<p>Usuário e/ou senha incorreto(s).</p>";                   
-                    }
-                    else {
-                        ////Utilizando dados em sessão
-                        // session_start();
-                        // $_SESSION["nome"] = $u->getUsuario();
-                        // header("Location: areaRestrita.php"); //redirecionando para outra página
-                        $cookieName = "nome";
-                        $cookieValue = $u->getNome();
-                        setcookie($cookieName, $cookieValue, time() + 86400, "/");
-                        header("Location: ../php/void.php");
-                    }
-                }
-                ?>
+            
             </form>
         </div>
     </main>
     <div class="suport-fale-conosco">
-                <h1>Central de atendimento</h1>
-                <h2>(Seg á sex das 8h ás 18h)</h2>
-        <div class="suport-fale-conosco2">
+            <p class="central-suport">Central de atendimento</p>
+            <p class="clock-suport">(Seg á sex das 8h ás 18h)</p>
+
+        <div class="card-suport">
                 <img src="assets/img/Telefone.png" alt="">
                 <p>(13)99622-9144</p>
+        </div>
+
+        <div class="card-suport">
                 <img src="assets/img/email.png" alt="">
                 <p>suporte@braintag.com.br</p>
         </div>
