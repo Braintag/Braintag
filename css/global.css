@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue-primary: #2644D5;
+    --blue-secondary: #367EE7;
+    --yellow-primary: #FAFF00;
+    --white-transparent: #D2D2D2;
+
+    --bg-white: #dadde2;
+    --bg-card: #303030;
+    --bg-disabled: #30303080;
+
+    --white-text: #FFFFFF;
+    --black-text: #000000;
+
+    --font-primary: 'Rubik', sans-serif;
+    --font-secondary: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-white);
+}

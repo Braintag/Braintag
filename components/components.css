@@ -1,0 +1,141 @@
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 5rem;
+
+    background-color: var(--blue-primary);
+}
+
+#button-hamburger {
+    font-size: 3rem;
+    border: none;
+    color: var(--white-text);
+    background-color: transparent;
+}
+
+#logo {
+    width: 4rem;
+    height: 4rem;
+}
+
+.header-internal {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 0 0.8rem;
+}
+
+.header-internal nav {
+    display: none;
+}
+
+header hr {
+    width: 100%;
+    height: 2px;
+    margin-bottom: 0.2rem;
+    background-color: var(--yellow-primary);
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+
+    width: 100%;
+    height: 100%;
+    background-color: var(--blue-primary);
+}
+
+.menu button {
+    cursor: pointer;
+    border: none;
+    padding: 0.8rem;
+
+    background-color: transparent;
+}
+
+.menu button img {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0.5rem 0.3rem;
+}
+
+.menu-options {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+    
+    margin-top: 7.5rem;
+}
+
+.menu-options a {
+    font-family: var(--font-primary);
+    font-size: 2.25rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    text-decoration: none;
+    color: var(--white-text);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 3rem;
+    padding: 0 2rem;
+    background-color: var(--blue-primary);
+}
+
+footer p {
+    font-family: var(--font-primary);
+    font-size: 0.75rem;       
+}
+
+@media (min-width: 1280px) {
+    #button-hamburger {
+        display: none;
+    }
+
+    header {
+        height: 7rem;
+    }
+
+    #logo {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .header-internal {
+        align-items: center;
+        padding: 0 2rem;
+    }
+
+    .header-internal nav {
+        display: flex;
+        flex-direction: row;
+        gap: 4rem;
+    }
+
+    .header-internal nav a {
+        font-size: 2rem;
+        font-family: var(--font-primary);
+        text-decoration: none;
+
+        color: var(--white-text);
+    }
+
+    header hr {
+        height: 4px;
+        margin-bottom: 0.4rem;
+    }
+}

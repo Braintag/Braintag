@@ -27,6 +27,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD:loginAluno.php
 
 
 
@@ -56,6 +57,12 @@
 
 
     </header>
+=======
+    
+    <?php
+        include_once('./components/header.php')
+    ?>
+>>>>>>> 2bf1aeed1d99ec465fc969c9eb99efc465e92d6a:login.php
 
     <main>
 
@@ -164,12 +171,18 @@
             </section>
         </main>
 
+<<<<<<< HEAD:loginAluno.php
         <footer>
             <p>
             © 2023 Braintag - Todos os Direitos Reservados. Desenvolvido com paixão pelo aprendizado.
 
             </p>
         </footer>
+=======
+    <?php
+        include_once('./components/footer.php')
+    ?>
+>>>>>>> 2bf1aeed1d99ec465fc969c9eb99efc465e92d6a:login.php
 
 
 </body>
