@@ -138,4 +138,12 @@ footer p {
         height: 4px;
         margin-bottom: 0.4rem;
     }
+
+    footer {
+        height: 5rem;
+    }
+
+    footer p {
+        font-size: 1.25rem;       
+    }
 }

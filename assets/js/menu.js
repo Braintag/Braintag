@@ -10,7 +10,7 @@ function handleMenu() {
     
     } else {
         menu.style.display = "none";
-        opacity.style.backgroundColor = "#0000";
+        opacity.style.backgroundColor = "var(--branco)";
         menu.style.zIndex = "0";
 
 

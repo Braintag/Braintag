@@ -1,5 +1,4 @@
 
-
 * {
     margin: 0;
     padding: 0;
@@ -31,7 +30,7 @@ h2{
 }
 h2{
 
-    top: 5px;
+    top: -90px;
     color: var(--branco);
     font-size: 32px;
     font-family: 'Rubik';
@@ -42,8 +41,8 @@ h2{
 
     background-color: var(--header);
     margin: 25px 25px;
-    width: 312px;
-    height: 415px;
+    width: 412px;
+    height: 815px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,7 +68,7 @@ h2{
 }
 
 .text--field > input{
-    top: 30px;
+    top: -70px;
     background-color: var(--branco);
     width: 100%;
     border: none;
@@ -87,7 +86,7 @@ h2{
 }
 
 .text--field > label{
-    top: 25px;
+    top: -70px;
     padding: 1%;
     color: var(--branco);
     margin-bottom: 10px; 
@@ -96,30 +95,51 @@ h2{
 }
 
 
-.form-lembrar{
+
+.text-field > label{
+
     position: relative;
 }
 
-.form-lembrar{
+.text-field{
 
+    color: var(--preto);
     display: flex;
-    padding: 4%;
-    top: 30px;
-    left: -75px;
-    color: var(--branco);
-    font-family: 'Inter';
-    font-size: 12px;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: center;
+    margin: 10px 0px ;
 }
 
-.form-check-label{
 
+.text-field > label{
+
+    top: -70px;
+    padding: 1%;
+    color: var(--branco);
+    margin-bottom: 10px; 
+    font-family: 'Inter';
     margin-left: 10px;
 }
 
-.form-check-input{
+.text-field input{
 
-    background: var(--texto-titulos);
+    top: -70px;
+    background-color: var(--branco);
+    width: 415px;
+    height: 120px;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    color: var(--texto-titulos);
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+
 }
+
 
 
 .btn-login{
