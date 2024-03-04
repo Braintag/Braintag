@@ -121,7 +121,7 @@ main h1 {
     margin-top: 1rem;
 }
 
-.form-login form span {
+.form-login form .message span {
     width: 80%;
     font-family: var(--font-secondary);
     font-size: 1rem;

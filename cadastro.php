@@ -1,3 +1,5 @@
+<?php include("./class/Aluno.php") ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,6 +23,7 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/cadastro.css">
     <script src="assets/js/menu.js"></script>
+    <script src="assets/js/validarSenha.js"></script>
 </head>
 <body>
     <?php
@@ -43,54 +46,32 @@
                 <input type="email" name="email" required placeholder="Insira o seu email">
 
                 <label>Senha</label>
-                <input type="password" name="senha" minlength="5" required placeholder="Insira a sua senha">
+                <input type="password" id="senha" name="senha" minlength="5" required placeholder="Insira a sua senha">
 
                 <label>Confirmar Senha</label>
-                <input type="password" name="confirmar-senha" minlength="5" required placeholder="Insira a sua senha novamente">
+                <input type="password" id="confirmar-senha" name="confirmar-senha" minlength="5" required placeholder="Insira a sua senha novamente">
+                <span class="mensagem-erro" id="erro-senha" style="visibility: hidden">As senhas não coincidem</span>
 
                 <section class='botao'>
-                    <button type="submit" name="inserir">Cadastrar</button>
+                    <button type="submit" name="cadastrar" onclick="return validarSenha()">Cadastrar</button>
                 </section>
                 
-                <span>Já tem uma conta? <a href='login.php' class='redirecionar' >Entrar</a></span>
-
-            <?php
-                //if(isset($_REQUEST["inserir"]))
-                //{
-                    //$u = new User();
-
-                    //if ($u->autenticarUsuario($_REQUEST["email"],$_REQUEST["senha"]) == 0)
-                    //{
-                        // echo "<p>E-mail e/ou senha incorreto(s)!</p>";                   
-                    //}
-                    //else 
-                    //{
-                        //session_start();
-                        //$_SESSION["nome"] = $u->getNome();
-                        //header("Location: ../php/void.php"); //*redirecionando para outra página
-                    //}
-                //}
-
-                if (isset($_REQUEST["inserir"]))
-                {
-                    $u = new User();
-    
-                    if ($u->autenticarUsuario($_REQUEST["email"], $_REQUEST["senha"]) == 0)
+                <?php
+                    if (isset($_REQUEST["cadastrar"]))
                     {
-                        echo "<p>Usuário e/ou senha incorreto(s).</p>";                   
+                        $a = new Aluno();
+                        $a->create($_REQUEST["nome"], $_REQUEST["email"], $_REQUEST["senha"]);
+
+                        echo $a->inserirAluno() == true ? "
+                        <span class='mensagem-sucesso'>Cadastro efetuado com sucesso!</span>" : 
+                        "<span class='mensagem-erro'>Ocorreu um erro! Tente novamente mais tarde</span>";
                     }
-                    else {
-                        ////Utilizando dados em sessão
-                        // session_start();
-                        // $_SESSION["nome"] = $u->getUsuario();
-                        // header("Location: areaRestrita.php"); //redirecionando para outra página
-                        $cookieName = "nome";
-                        $cookieValue = $u->getNome();
-                        setcookie($cookieName, $cookieValue, time() + 86400, "/");
-                        header("Location: ../php/void.php");
-                    }
-                }
                 ?>
+                
+                <section class="message">
+                    <span>Já tem uma conta? <a href='login.php' class='redirecionar' >Entrar</a></span>
+                </section>
+
             </form>
         </section>
     </main>

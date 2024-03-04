@@ -1,24 +1,18 @@
 <?php
 
-    
-
-    class User
+    class Aluno
     {
 
         private $nome;
         private $email;
-        private $dtNascimento;
-        private $cidade;
         private $senha;
 
         public function __construct(){}
 
-        public function create($_nome, $_email, $_dtNascimento, $_cidade, $_senha)
+        public function create($_nome, $_email, $_senha)
         {
             $this->nome = $_nome;
             $this->email = $_email;
-            $this->dtNascimento = $_dtNascimento;
-            $this->cidade = $_cidade;
             $this->senha = md5($_senha);
         }
 
@@ -51,38 +45,6 @@
 
         //*
         
-
-        //* get and set from dtNascimento
-
-        public function getdtNascimento()
-        {
-            return $this->dtNascimento;
-        }
-
-        public function setdtNascimento($_dtNascimento)
-        {
-            $this->dtNascimento = $_dtNascimento;
-        }
-
-        //*
-
-
-
-        //* get and set from Cidade
-
-        public function getCidade()
-        {
-            return $this->cidade;
-        }
-
-        public function setCidade($_cidade)
-        {
-            $this->cidade = $_cidade;
-        }
-
-        //*
-
-
         //* get and set from Senha
 
         public function getSenha()
@@ -97,22 +59,18 @@
 
         //*
 
+        //?Função de inserir usuário
 
-        
-             //?Função de inserir usuário
-
-        public function inserirUser()
+        public function inserirAluno()
         {
             try 
             {
-                include("../db/conn.php");
-                $sql = "CALL Usuario(:nome, :email, :dtNascimento, :cidade, :senha)";
+                include_once("./db/conn.php");
+                $sql = "CALL piAluno(:nome, :email, :senha)";
 
                 $data = [
                     'nome' => $this->nome,
                     'email' => $this->email,
-                    'dtNascimento' => $this->dtNascimento,
-                    'cidade' => $this->cidade,
                     'senha' => $this->senha,
                 
             ];
@@ -131,17 +89,15 @@
         }
         //?
 
+        //?Função de listar o usuário
 
-
-              //?Função de listar o usuário
-
-        public function lsUsuario()
+        public function listarAluno()
         {
             try 
             {
                 include("../db/conn.php");
 
-                $sql = "CALL lsUsuario('')";
+                $sql = "CALL psAluno('')";
                 $data = $conn->query($sql)->fetchAll();
 
                 return $data;
@@ -154,8 +110,37 @@
             
          //?
 
-
-              //?Função de deletar o usuário
+         //?Função de autenticar o usuário
+         
+         public function autenticarAluno($_email, $_senha)
+         {
+             
+             try{
+                 
+                 include("../db/conn.php");
+                 $sql = "CALL psLoginAluno('$_email', '$_senha')";
+                 $stmt = $conn->prepare($sql);
+                 
+                 $stmt->execute(); 
+                 
+                 
+                 if ($user = $stmt->fetch()) //se encontrar registro
+                 {
+                     $this->nome = $user["nome"];
+                     return 1;
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                }
+                catch (\Exception $e)
+                {
+                    return false;
+                }
+                
+            }
+        //?Função de deletar o usuário
 
         public function delUsuario($_id)
         {
@@ -181,9 +166,7 @@
         }
         //?
 
-
-
-              //?Função de atualizar o usuário
+        //?Função de atualizar o usuário
 
         public function atualizarUsuario($_id)
         {
@@ -208,12 +191,11 @@
             {
                 return false;
             }
-    
-    }
-            //?
+        }
 
+        //?
 
-              //?Função de buscar o usuário
+        //?Função de buscar o usuário
 
         public function buscarUsuario($_id)
         {
@@ -232,46 +214,6 @@
 
             return true;
         }
-    
-
-             //?
-
-
-
-                //?Função de autenticar o usuário
-
-            public function autenticarUsuario($_email, $_senha)
-            {
-
-                try{
-
-                include("../db/conn.php");
-                $sql = "CALL Login('$_email', '$_senha')";
-                $stmt = $conn->prepare($sql);
-
-                $stmt->execute(); 
-                
-
-                if ($user = $stmt->fetch()) //se encontrar registro
-                {
-                    $this->nome = $user["nome"];
-                    return 1;
-                }
-                else
-                {
-                    return 0;
-                }
-            }
-                catch (\Exception $e)
-                {
-                    return false;
-                }
-        
-
-        }
-                //?
-
-
     }
 
 ?>

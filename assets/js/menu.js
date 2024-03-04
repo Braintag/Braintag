@@ -12,8 +12,5 @@ function handleMenu() {
         menu.style.display = "none";
         opacity.style.backgroundColor = "var(--branco)";
         menu.style.zIndex = "0";
-
-
-
     }
 }

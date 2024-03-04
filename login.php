@@ -53,51 +53,30 @@
                 </div>
 
                 <section class='botao'>
-                    <button type="submit" name="inserir">Entrar</button>
+                    <button type="submit" name="conectar">Entrar</button>
                 </section>
+
+                <?php
+                    if (isset($_REQUEST["conectar"])) {
+                        $a = new Aluno();
+
+                        if ($a->autenticarAluno($_REQUEST["email"], $_REQUEST["senha"]) == true) {
+                            $cookieName = "nome";
+                            $cookieValue = $a->getNome();
+                            setcookie($cookieName, $cookieValue);
+                            header("Location: cursos.php");               
+                        }
+
+                        else {
+                            echo "<span class='mensagemErro'>Usuário e/ou senha incorreto(s)</span>"; //redirecionando para outra página
+                        }
+                    }
+                ?>
 
                 <section class="message">
                     <span>Ainda não tem cadastro? <a class='redirecionar' href="cadastro.php">Clique aqui</a> </span> 
                 </section>
-                
-                    <?php
-
-                    //if(isset($_REQUEST["inserir"]))
-                    //{
-                        //$u = new User();
-
-                        //if ($u->autenticarUsuario($_REQUEST["email"],$_REQUEST["senha"]) == 0)
-                        //{
-                            // echo "<p>E-mail e/ou senha incorreto(s)!</p>";                   
-                        //}
-                        //else 
-                        //{
-                            //session_start();
-                            //$_SESSION["nome"] = $u->getNome();
-                            //header("Location: ../php/void.php"); //*redirecionando para outra página
-                        //}
-                    //}
-
-                    // if (isset($_REQUEST["inserir"]))
-                    // {
-                    //     $u = new User();
-        
-                    //     if ($u->autenticarUsuario($_REQUEST["email"], $_REQUEST["senha"]) == 0)
-                    //     {
-                    //         echo "<p>Usuário e/ou senha incorreto(s).</p>";                   
-                    //     }
-                    //     else {
-                    //         ////Utilizando dados em sessão
-                    //         // session_start();
-                    //         // $_SESSION["nome"] = $u->getUsuario();
-                    //         // header("Location: areaRestrita.php"); //redirecionando para outra página
-                    //         $cookieName = "nome";
-                    //         $cookieValue = $u->getNome();
-                    //         setcookie($cookieName, $cookieValue, time() + 86400, "/");
-                    //         header("Location: ../php/void.php");
-                    //     }
-                    // }
-                ?>
+            
             </form>
         </section>
     </main>

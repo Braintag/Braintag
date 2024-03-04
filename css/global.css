@@ -9,6 +9,7 @@
     --blue-secondary: #367EE7;
     --blue-form: #0E5BCB;
     --yellow-primary: #FAFF00;
+    --orange-error: #FF9635;
     --white-transparent: #d2d2d280;
     
     --bg-white: #dadde2;
@@ -37,4 +38,13 @@ h1, h2, h3, strong {
 
 .redirecionar {
     color: #FAFF00;
+}
+
+.mensagem-sucesso {
+    color: var(--yellow-primary);
+    text-align: center;
+}
+
+.mensagem-erro {
+    color: var(--orange-error);
 }

@@ -44,12 +44,8 @@
                 <section class='botao'>
                     <button type="submit" name="inserir">Enviar</button>
                 </section>
-                
-
-            
             </form>
         </div>
-    </main>
     <div class="suport-fale-conosco">
             <p class="central-suport">Central de atendimento</p>
             <p class="clock-suport">(Seg á sex das 8h ás 18h)</p>
@@ -64,8 +60,9 @@
                 <p>suporte@braintag.com.br</p>
         </div>
     </div>
-    
-<?php
+    </main>
+
+    <?php
         include_once('./components/footer.php')
-?>
+    ?>
 </body>

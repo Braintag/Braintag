@@ -13,6 +13,7 @@ main h1 {
 main img {
     width: 90%;
 }
+
 .form-fale-conosco {
     display: flex;
     flex-direction: column;
@@ -27,6 +28,7 @@ main img {
 
     width: 80%;
     padding: 1.5rem;
+    margin-bottom: 2rem;
 
     border-radius: 8px;
 
@@ -44,13 +46,13 @@ main img {
 .form-fale-conosco form label {
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
-    margin-left: 0.8rem;
+    margin-left: 1rem;
     margin-bottom: 0.4rem;
 
     color: #fff;
 }
 .form-fale-conosco form input {
-    padding: 0.8rem 0.4rem;
+    padding: 0.8rem;
     margin-bottom: 0.8rem;
 
     border: 1px solid #555555;
@@ -69,7 +71,7 @@ main img {
     justify-content: flex-end;
 }
 .form-fale-conosco form button {
-    width: 40%;
+    width: 50%;
     height: 2rem;
     margin-top: 1rem;
 
@@ -87,6 +89,7 @@ main img {
     font-size: 1rem;
 }
 .suport-fale-conosco{
+    padding: 1.5rem 0;
     background-color: #303030;
     text-align: center;
     display: flex;
@@ -109,14 +112,16 @@ main img {
     flex-direction: row;
     align-items: center;
     width: 60%;
-    gap: 16px;
+    gap: 1rem;
     margin-bottom: 10px;
 }
 .card-suport p{
     color: #367EE7;
     font-family: var(--font-secondary);
+    text-decoration: underline;
 }
 .card-suport img{
+    width: 30px;
     height: 30px;
 }
 
