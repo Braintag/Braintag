@@ -10,7 +10,7 @@
         <nav>
             <a href="./index.php">Home</a>
             <a href="./cursos.php">Cursos</a>
-            <a href="./fale-conosco">Fale conosco</a>
+            <a href="./fale-conosco.php">Fale conosco</a>
             <a href="./login.php">Entrar</a>
         </nav>
     </div>
