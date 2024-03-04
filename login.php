@@ -28,7 +28,7 @@
 
 <body>
 
-    <?php 
+    <?php
         include_once('./components/header.php')
     ?>
 

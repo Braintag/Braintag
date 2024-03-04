@@ -1,40 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/fale-conosco.css">
+<html lang="pt-br">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    <title>BrainTag - Cadastro</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrainTag</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
-
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="css/fale-conosco.css">
     <script src="assets/js/menu.js"></script>
+
 </head>
 <body>
-    <?php
+    
+<?php
         include_once('./components/header.php')
-    ?>
+        ?>
+        <main>
+            <h1>Fale Conosco</h1>
 
-    <main>
-        <h1>Faça seu cadastro</h1>
-
-        <section class="form-cadastro">
-            <img src="assets/img/cadastro.svg" alt="">
+            <img src="assets/img/contato.svg" alt="">
+        <div class="form-fale-conosco">
 
             <form method="POST">
-                <strong>Cadastre-se</strong>
+            <strong>Entre em contato</strong> 
 
                 <label>Nome</label>
                 <input type="text" name="nome" minlength="3" required placeholder="Insira o seu nome completo">
@@ -42,17 +35,16 @@
                 <label>Email</label>
                 <input type="email" name="email" required placeholder="Insira o seu email">
 
-                <label>Senha</label>
-                <input type="password" name="senha" minlength="5" required placeholder="Insira a sua senha">
+                <label>Assunto</label>
+                <input type="text" name="assunto" minlength="5" required placeholder="Insira o assunto">
 
-                <label>Confirmar Senha</label>
-                <input type="password" name="confirmar-senha" minlength="5" required placeholder="Insira a sua senha novamente">
+                <label>Mensagem</label>
+                <input type="text" name="Mensagem" minlength="5" required placeholder="Insira a sua mensagem">
 
                 <section class='botao'>
-                    <button type="submit" name="inserir">Cadastrar</button>
+                    <button type="submit" name="inserir">Enviar</button>
                 </section>
                 
-                <span>Já tem uma conta? <a href='login.php' class='redirecionar' >Entrar</a></span>
 
             <?php
                 //if(isset($_REQUEST["inserir"]))
@@ -92,11 +84,20 @@
                 }
                 ?>
             </form>
-        </section>
+        </div>
     </main>
-
-    <?php
+    <div class="suport-fale-conosco">
+                <h1>Central de atendimento</h1>
+                <h2>(Seg á sex das 8h ás 18h)</h2>
+        <div class="suport-fale-conosco2">
+                <img src="assets/img/Telefone.png" alt="">
+                <p>(13)99622-9144</p>
+                <img src="assets/img/email.png" alt="">
+                <p>suporte@braintag.com.br</p>
+        </div>
+    </div>
+    
+<?php
         include_once('./components/footer.php')
-    ?>
+?>
 </body>
-</html>
