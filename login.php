@@ -41,25 +41,25 @@
             <form method="POST">
                 <strong>Login</strong>
 
-                <label for="usuario" class='form-login-label' >E-mail</label>
-                <input type="text" name="usuario" placeholder="Insira seu e-mail" class='form-login-input' >
+                <label for="usuario" class='form-login-label'>E-mail</label>
+                <input type="text" name="usuario" placeholder="Insira seu e-mail" class='form-login-input' required>
     
-        
-                <label for="senha" class='form-login-label' >Senha</label>
-                <input type="password" name="senha" placeholder="Insira sua senha" class='form-login-input'>
+                <label for="senha" class='form-login-label'>Senha</label>
+                <input type="password" name="senha" placeholder="Insira sua senha" class='form-login-input' required>
  
                 <div class="form-lembrar">
                     <input type="checkbox" name="invalidCheck">
                     <label for="invalidCheck">Lembrar da senha</label>
                 </div>
 
-                <button class="botao">Entrar</button>
-
-                <section class="aaa">
-                    <span class ='po'>Ainda não tem cadastro?</span> <a class='redirecionar' href="cadastro.php">Clique aqui</a>
+                <section class='botao'>
+                    <button type="submit" name="inserir">Entrar</button>
                 </section>
 
-
+                <section class="message">
+                    <span>Ainda não tem cadastro? <a class='redirecionar' href="cadastro.php">Clique aqui</a> </span> 
+                </section>
+                
                     <?php
 
                     //if(isset($_REQUEST["inserir"]))

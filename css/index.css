@@ -1,134 +1,427 @@
-* {
-    margin: 0;
-    padding: 0;
+#banner {
+    width: 100%;
+    height: 10rem;
+
+    background-image: url("../assets/img/banner-mobile.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-main h1 {
-    font-family: var(--font-primary);
-    font-size: 2.5rem;
-    font-weight: 400;
-    text-align: center;
-
-    margin-top: 1rem;
-}
-
-.form-login {
+.introduction-home {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.introduction-home h2 {
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: var(--font-primary);
+}
+
+.introduction-home p {
+    width: 100%;
+    font-size: 1rem;
+    font-family: var(--font-secondary);
+}
+
+.cards-course-simple {
+    display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
 
-    margin-bottom: 1rem;
+    margin: 1rem 0;
 }
 
-.form-login img {
-    width: 60%;
-}
-
-.form-login form strong {
-    text-align: center;
-    font-size: 2rem;
-    color: var(--white-text);
-}
-
-.form-login form {
-    margin: 2rem;
-    width: 80%;
-
+.cards-course-simple article  {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 
-    padding: 2.5rem;
+    width: 9rem;
     border-radius: var(--border);
-    box-shadow: 0px 10px 40px #00000056;
 
     background-color: var(--blue-secondary);
 }
 
-.form-login-label {
-    font-family: var(--font-secondary);
-    font-size: 1rem;
-    margin-left: 1rem;
-    margin-bottom: 0.4rem;
-
-    color: #fff;
+.name-course-simple span {
+    width: 100%;
+    font-family: var(--font-primary);
+    font-size: 0.75rem;
+    text-align: center;
+    
+    color: var(--white-text);
 }
 
-.form-login-input {
-    padding: 0.8rem;
-    margin-bottom: 0.8rem;
-
-    border: 1px solid #555555;
-    border-radius: var(--border);
-
-    background-color: #fff;
-}
-
-.form-login-input::placeholder {
-    font-family: var(--font-secondary);
-    font-size: 0.9rem;
-
-    color: var(--cyan-text);
-}
-
-.form-lembrar {
+.image-course-simple {
     display: flex;
-    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+
+    height: 7rem;
 }
 
-.form-lembrar label {
+.image-course-simple img {
+    width: 50%;
+}
+
+.name-course-simple {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 3rem;
+
+    border-end-start-radius: 8px;
+    border-end-end-radius: 8px;
+
+    background-color: var(--bg-card);
+
+}
+
+.study-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+
+    padding: 2rem;
+
+    color: var(--white-text);
+    background-color: #303030;
+}
+
+.study-home h2 {
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.study-home p {
+    font-family: var(--font-secondary);
     font-size: 0.8rem;
 }
 
-.form-lembrar input[type=checkbox] {
-    width: 40px;
-    height: 40px;
-    border-radius: 1rem;
+.class-home {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    padding: 0 2rem;
 }
 
+.class-home h2 {
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    font-weight: 500;
 
-.btn-login {
-
-    position: relative;
+    margin-top: 1rem;
 }
 
-.btn-login {
+.class-home div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
 
-    width: 150px;
-    font-size: 12px;
-    background-color: var(--branco);
-    color: var(--titulo);
+.card-class-home {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    width: 90%;
+    height: fit-content;
+    padding: 5%;
+
+    border-radius: var(--border);
+    background-color: var(--bg-card);
+}
+
+.card-class-home p {
+    font-family: var(--font-secondary);
+    font-size: 0.8rem;
+    color: var(--white-text);
+}
+
+.card-class-home img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-class-home h3 {
+    font-family: var(--font-primary);
+    font-size: 1rem;
+
+    color: var(--white-text);
+}
+
+.course-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    
+    margin-top: 3rem;
+    padding: 4%;
+    
+    font-size: 1.25rem;
+
+    color: var(--white-text);
+    background-color: var(--bg-card);
+}
+
+.course-home h2 {
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    font-weight: 500;
     text-align: center;
-    top: 05px;
-    right: -80px;
-    padding: 12px 12px;
-    margin: 25px;
-    border: none;
-    border-radius: 8px;
-    outline: none;
-    text-transform: uppercase;
-    font-weight: 600;
-    cursor: pointer;
-    box-shadow: 0px 10px 40px -12px #00000056;
 }
 
-.aaa {
+.course-home a {
+    margin: 0 auto;
+    padding: 2%;
 
-    position: relative;
-    top: -60px;
-
+    text-decoration: none;
+    font-family: var(--font-primary);
+    font-size: 1.25rem;
+    text-align: center;
+    
+    width: 80%;
+    border-radius: var(--border);
+    background-color: var(--yellow-primary);
+    color: var(--black-text);
 }
 
-.po {
+@media (min-width: 700px) {
+    #banner {
+        height: 15rem;
 
-    position: relative;
-    top: -05px;
-    font-size: 16px;
+        background-image: url('../assets/img/banner-desktop-400.jpg');
+    }
+
+    .introduction-home h2{
+        font-size: 2.25rem;
+    }
+
+    .introduction-home p{
+        font-size: 1.25rem;
+    }
+
+    .image-course-simple img {
+        width: 70%;
+    }
+
+    .card-course-simple article {
+        width: 18rem;
+        margin-bottom: 1rem;
+    }
+
+    .image-course-simple {
+        height: 12rem;
+    }
+
+    .name-course-simple {
+        height: 4rem;
+    }
+
+    .name-course-simple span {
+        font-size: 1.25rem;
+    }
+    
+    .introduction-home h2 {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    
+    .introduction-home p {
+        font-size: 1.5rem;
+    }
+    
+    .cards-course-simple article  {
+        width: 16rem;
+    }
+    
+    .image-course-simple img {
+        width: 80%;
+    }
+    
+    .name-course-simple {
+        width: 100%;
+        height: 4rem;
+    }
+    
+    .study-home {
+        height: 20rem;
+    }
+    
+    .study-home h2 {
+        font-family: var(--font-primary);
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    
+    .study-home p {
+        font-family: var(--font-secondary);
+        font-size: 1rem;
+    }
+    
+    .class-home {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    
+        padding: 1rem 2rem;
+    }
+    
+    .class-home h2 {
+        font-family: var(--font-primary);
+        font-size: 2rem;
+    
+        margin-bottom: 2rem;
+    }
+    
+    .class-home div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 8rem;
+    }
+    
+    .card-class-home h3 {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    
+    .card-class-home p {
+        font-size: 1rem;
+    }
+
+    .course-home {        
+        margin-top: 3rem;
+        padding: 2%;
+    }
+    
+    .course-home h2 {
+        font-family: var(--font-primary);
+        font-size: 2rem;
+        font-weight: 500;
+        text-align: center;
+    }
 }
 
-.cq {
-    color: var(--amarelo);
-    position: relative;
-    top: -05px;
-    font-size: 16px;
+@media (min-width: 1280px) {
+    #banner {
+        width: 100%;
+        height: 25rem;
+        
+        background-image: url('../assets/img/banner-desktop-400.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .introduction-home {
+        padding: 3rem;
+    }
+    
+    .introduction-home h2 {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    
+    .introduction-home p {
+        font-size: 1.5rem;
+    }
+    
+    .cards-course-simple article  {
+        width: 16rem;
+    }
+    
+    .image-course-simple img {
+        width: 80%;
+    }
+    
+    .name-course-simple {
+        width: 100%;
+        height: 4rem;
+    }
+    
+    .study-home {
+        height: 20rem;
+    }
+    
+    .study-home h2 {
+        font-family: var(--font-primary);
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    
+    .study-home p {
+        font-family: var(--font-secondary);
+        font-size: 1rem;
+    }
+    
+    .class-home {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    
+        padding: 1rem 2rem;
+    }
+    
+    .class-home h2 {
+        font-family: var(--font-primary);
+        font-size: 2rem;
+    
+        margin-bottom: 2rem;
+    }
+    
+    .class-home div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 8rem;
+    }
+    
+    .card-class-home {    
+        width: 24%;
+        height: 24rem;
+        padding: 2%;
+    }
+    
+    .card-class-home h3 {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    
+    .card-class-home p {
+        font-size: 1rem;
+    }
+
+    .course-home {        
+        margin-top: 3rem;
+        padding: 2%;
+    }
+    
+    .course-home h2 {
+        font-family: var(--font-primary);
+        font-size: 2rem;
+        font-weight: 500;
+        text-align: center;
+    }
+    
+    .course-home a {
+        width: 25%;
+        padding: 1%;
+
+        font-size: 1.5rem;
+    }
 }

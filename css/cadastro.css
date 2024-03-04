@@ -28,13 +28,13 @@ main h1 {
     display: flex;
     flex-direction: column;
 
-    width: 80%;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
+    width: 90%;
+    padding: 2rem;
+    margin-bottom: 3rem;
 
     border-radius: var(--border);
 
-    background-color: #0E5BCB;
+    background-color: var(--blue-form);
 }
 
 .form-cadastro form strong {
@@ -79,7 +79,7 @@ main h1 {
 }
 
 .form-cadastro form button {
-    width: 40%;
+    width: 50%;
     height: 2rem;
     margin-top: 1rem;
 

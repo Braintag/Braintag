@@ -35,7 +35,7 @@
             <div class="card-course-simple">
                 <article>
                     <div class="image-course-simple">
-                        <img src="./assets/img/js.png" alt="Imagem remetente ao curso de JavaScript">
+                        <img src="./assets/img/js-dark.png" alt="Imagem remetente ao curso de JavaScript">
                     </div>
                     <div class="name-course-simple">
                         <span>Curso de JavaScript</span>
@@ -121,7 +121,7 @@
 
         <section class="course-home">
             <h2>Acesse agora todos os cursos!</h2>
-            <a href="./cursos.php">Cursos</a>
+            <a href="./login.php">Clique aqui para saber mais</a>
         </section>
     </main>
 

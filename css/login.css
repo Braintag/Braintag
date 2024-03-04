@@ -32,17 +32,17 @@ main h1 {
 }
 
 .form-login form {
-    margin: 2rem;
+    margin: 3rem 0;
     width: 80%;
     
     display: flex;
     flex-direction: column;
 
-    padding: 2.5rem;
+    padding: 2rem;
     border-radius: var(--border);
     box-shadow: 0px 10px 40px #00000056;
 
-    background-color: var(--blue-secondary);
+    background-color: var(--blue-form);
 }
 
 .form-login-label {
@@ -56,7 +56,7 @@ main h1 {
 
 .form-login-input {
     padding: 0.8rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
 
     border: 1px solid #555555;
     border-radius: var(--border);
@@ -77,58 +77,127 @@ main h1 {
 }
 
 .form-lembrar label{
-    font-size: 0.8rem;
+    font-size: 1rem;
+    color: var(--white-text);
 }
 
-.form-lembrar input[type=checkbox]{
-    width: 40px;
-    height: 40px;
-    border-radius: 1rem;
+.form-lembrar input[type=checkbox] {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    width: 20px;
+    height: 20px;
+    border-radius: 3rem;
 }
 
-
-.btn-login{
-
-    position: relative;
+.form-lembrar label {
+    font-size: 0.9rem;
 }
 
-.btn-login{
+.form-login form .botao {
+    display: flex;
+    justify-content: flex-end;
+}
 
-    width: 150px;
-    font-size: 12px;
-    background-color: var(--branco);
-    color: var(--titulo);
-    text-align: center;
-    top: 05px;
-    right: -80px;
-    padding: 12px 12px;
-    margin: 25px;
-    border: none;
+.form-login form .botao button {
+    width: 50%;
+    height: 2rem;
+    margin-top: 1rem;
+
+    border: 1px solid #555555;
     border-radius: 8px;
-    outline: none;
-    text-transform: uppercase;
-    font-weight: 600;
-    cursor: pointer;
-    box-shadow: 0px 10px 40px -12px #00000056;
+
+    font-size: 1.2rem;
+
+    color: var(--blue-form);
+    background-color: #fff;
 }
 
-.aaa{
-
-    position: relative;
-    top: -60px;
-
+.form-login form .message {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
 }
 
-.po{
+.form-login form span {
+    width: 80%;
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    text-align: center;
 
-    position: relative;
-    top: -05px;
-    font-size: 16px;
+    color: var(--white-text);
 }
 
-.cq{
-    color: var(--amarelo);
-    position: relative;
-    top: -05px;
-    font-size: 16px;
+@media (min-width: 1024px) {
+    main h1 {
+        font-size: 3rem;
+        text-align: center;
+    
+        margin-top: 2rem;
+    }
+    
+    .form-login img {
+        width: 20%;
+    }
+    
+    .form-login form {
+        display: flex;
+        flex-direction: column;
+    
+        width: 40%;
+        padding: 1.5rem 3rem;
+    
+        border-radius: var(--border);
+    
+        background-color: #0E5BCB;
+    }
+    
+    .form-login form strong {
+        font-family: var(--font-primary);
+        font-size: 2rem;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 1rem;
+        
+        color: #fff;
+    }
+    
+    .form-login form label {
+        font-size: 1.25rem;
+    }
+
+    .form-login form input {
+        margin-bottom: 1rem;
+    }
+
+    .form-login form input::placeholder {
+        font-size: 1rem;
+    
+        color: #646363;
+    }
+
+    .form-lembrar label {
+        font-size: 0.4rem;
+    }
+
+    .form-login form .botao button {
+        width: 30%;
+        height: 2.5rem;
+        cursor: pointer;
+        margin-top: 1rem;
+    
+        border: 1px solid var(--border-input);
+        border-radius: var(--border);
+    
+        font-size: 1.25rem;
+    
+        color: #0E5BCB;
+        background-color: #fff;
+    }
+
+    .form-login form span{
+        font-size: 1rem;
+    }
 }
