@@ -43,8 +43,8 @@
                     <h3>
                     Curso de JavaScript
                     </h3>
-                    <p>
-                    Um curso abrangente sobre a linguagem de programação JavaScript, cobrindo desde os fundamentos até tópicos avançados como manipulação do DOM e programação orientada a objetos.
+                    <p class="cursos">
+                    Um curso abrangente sobre a linguagem de <br> programação JavaScript, cobrindo desde os <br> fundamentos até tópicos avançados como <br> manipulação do DOM e programação orientada a <br> objetos.
                     </p>
 
                     <div>
@@ -59,7 +59,7 @@
                     <h3>
                     Curso de Java
                     </h3>
-                    <p>
+                    <p class="cursos">
                     Este curso ensina os conceitos fundamentais e avançados da linguagem de programação Java, abordando desde sintaxe básica até desenvolvimento Android e aplicativos corporativos.
                     </p>
                     <div>
@@ -74,7 +74,7 @@
                     <h3>
                     Desenvolvimento Web
                     </h3>
-                    <p>
+                    <p class="cursos">
                     Um curso completo que abrange HTML, CSS, JavaScript e desenvolvimento do lado do servidor com tecnologias como PHP, Python ou Node.js, além de frameworks populares como Django e AngularJS.                
                     </p>
                     <div>
@@ -89,16 +89,13 @@
                     <h3>
                     Curso de MySql
                 </h3>
-                    <p>
+                    <p class="cursos">
                     Focado no sistema de gerenciamento de banco de dados MySQL, este curso ensina design de banco de dados, consultas SQL, otimização e integração com várias linguagens de programação para desenvolvimento web.    </p>
                     <div>
                     <a href="">Indisponível</a>
                     </div>
                 </article>
-
-
-
-    </div>
+            </div>
     </section>
     
 </main>

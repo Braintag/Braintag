@@ -151,8 +151,44 @@ p{
 
 }
 
-footer{
+@media (min-width: 1024px)
+{
+    .container-flex div{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
 
-    color: var(--white-text);
+
+        width: 70%;
+    }
+
+    
+    .container-flex div article{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .card-class-course-available{
+        width: 440px;
+        height: 796px;
+        
+    }
+    .card-class-course-unavailable{
+        width: 440px;
+        height: 796px; 
+        
+    }
+
+    .cursos{
+        font-size: 24px;
+    }
+    .card-class-course-available p{
+        font-size: 24px;
+    }
 }
+
+
+
 
