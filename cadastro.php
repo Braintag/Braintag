@@ -31,10 +31,12 @@
     ?>
 
     <main>
-        <h1>Faça seu cadastro</h1>
-
+        
         <section class="form-cadastro">
-            <img src="assets/img/cadastro.svg" alt="">
+            <div class="cadastro-topo">
+                <h1>Faça seu cadastro</h1>
+                <img src="assets/img/cadastro.svg" alt="">
+            </div>
 
             <form method="POST">
                 <strong>Cadastre-se</strong>

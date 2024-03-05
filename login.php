@@ -33,10 +33,11 @@
     ?>
 
     <main>
-        <h1>Faça seu Login</h1>
-
         <section class="form-login"">
-            <img src="assets/img/login.svg" alt="">
+            <div class="login-topo">
+                <h1>Faça seu Login</h1>
+                <img src="assets/img/login.svg" alt="">
+            </div>
 
             <form method="POST">
                 <strong>Login</strong>
