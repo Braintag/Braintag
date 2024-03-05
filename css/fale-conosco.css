@@ -132,14 +132,28 @@ main img {
     
         margin-top: 2rem;
     }
-    .form-fale-conosco img {
+
+    .form-fale-conosco {
+        display: flex;
+        flex-direction: row;
+        gap: 4rem;
+    }
+
+    .fale-conosco-topo {
+        display: flex;
+        flex-direction: column;
         width: 30%;
     }
+
+    .form-fale-conosco img {
+        width: 100%;
+    }
+    
     .form-fale-conosco form {
         display: flex;
         flex-direction: column;
     
-        width: 40%;
+        width: 30%;
         padding: 3rem;
     
         border-radius: 8px;

@@ -21,10 +21,12 @@
         include_once('./components/header.php')
         ?>
         <main>
-            <h1>Fale Conosco</h1>
-
+            
             <div class="form-fale-conosco">
-            <img src="assets/img/contato.svg" alt="">
+                <div class="fale-conosco-topo">
+                    <h1>Fale Conosco</h1>
+                    <img src="assets/img/contato.svg" alt="">
+                </div>
 
             <form method="POST">
             <strong>Entre em contato</strong> 
