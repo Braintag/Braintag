@@ -2,7 +2,7 @@
 
 <footer>
         <p>
-            © 2023 Braintag - Todos os Direitos Reservados. Desenvolvido com paixão pelo aprendizado.
+            © 2023 Braintag - Todos os Direitos Reservados.
 
         </p>
 </footer>
