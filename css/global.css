@@ -42,6 +42,7 @@ h1, h2, h3, strong {
 
 .mensagem-sucesso {
     color: var(--yellow-primary);
+    text-align: left;
 }
 
 .mensagem-erro {
