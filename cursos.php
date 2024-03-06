@@ -22,14 +22,20 @@
 
     <section id="banner"></section>
 
-    <main>
-        <h1>
-            Veja todos os cursos disponíveis na plataforma
-        </h1>
-
-        <p class ='text-p'>
-            Expanda o seu leque de conhecimentos com as tecnologias mais utilzadas no mercado.
-        </p>
+    <main class="background-cursos">
+        <section class="top-cursos">
+            <?php
+                if(isset($_COOKIE["nome"])) {
+                    echo "<span class='message-user'> Olá, " . $_COOKIE['nome'] . "</span>";
+                }
+            ?>
+            <h1 class="title-cursos">
+                Veja todos os cursos disponíveis na plataforma
+            </h1>
+            <p class="subtitle-cursos">
+                Expanda o seu leque de conhecimentos com as tecnologias mais utilzadas no mercado.
+            </p>
+        </section>
 
         <section class="container-flex">
 
@@ -44,7 +50,7 @@
                     Curso de JavaScript
                     </h3>
                     <p class="cursos">
-                    Um curso abrangente sobre a linguagem de <br> programação JavaScript, cobrindo desde os <br> fundamentos até tópicos avançados como <br> manipulação do DOM e programação orientada a <br> objetos.
+                    Um curso abrangente sobre a linguagem de  programação JavaScript, cobrindo desde os  fundamentos até tópicos avançados como  manipulação do DOM e programação orientada a  objetos.
                     </p>
 
                     <div>

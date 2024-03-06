@@ -7,7 +7,7 @@
 :root {
     --blue-primary: #2644D5;
     --blue-secondary: #367EE7;
-    --formblue-: #0E5BCB;
+    --blue-form: #0E5BCB;
     --yellow-primary: #FAFF00;
     --orange-error: #FF9635;
     --white-transparent: #d2d2d280;
@@ -42,7 +42,6 @@ h1, h2, h3, strong {
 
 .mensagem-sucesso {
     color: var(--yellow-primary);
-    text-align: center;
 }
 
 .mensagem-erro {
