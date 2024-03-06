@@ -13,12 +13,31 @@
     background-size: cover;
 }
 
-.title-cursos {
-    margin-top: 16px;
-    font-size: 3rem;
+.background-cursos {
+    padding: 1% 2%;
+}
+
+.top-cursos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     padding: 2%;
+}
+
+.message-user {
+    font-size: 1.5rem;
+    font-family: var(--font-primary);
+    color: var(--blue-form);
+}
+
+.title-cursos {
+    font-size: 1.25rem;
     font-weight: 500;
     font-family: var(--font-primary);
+}
+
+.subtitle-cursos {
+    font-size: 1rem;
 }
 
 .card-class-course-available a{
@@ -37,31 +56,27 @@
 
 
 .container-flex div article{
-
     display: flex;
     justify-content: center;
-
+    width: 90%;
 }
 
 
 .container-flex {
-
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 30px;
 }
 
 .container-flex div{
-
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 30px;
+    gap: 1rem;
 }
 
 .card-class-course-available{
@@ -151,22 +166,24 @@
         background-color:#ACADAE ;
 
     }
-    .subtitulo{
+    .subtitle-cursos{
         font-size: 26px;
         font-family: var(--font-secondary);
     }
-    h1{
+
+    .title-cursos{
         font-size: 38px;
         padding-top: 0;
         padding-bottom: 0;
     }
+
     .container-flex div{
         display: flex;
+        justify-content: center;
         flex-direction: row;
         flex-wrap: wrap;
 
-
-        width: 70%;
+        width: 100%;
     }
     
 
@@ -176,6 +193,7 @@
         justify-content: center;
         align-items: center;
         
+        width: 40%;
     }
 
     .card-class-course-available{

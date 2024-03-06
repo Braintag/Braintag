@@ -22,13 +22,20 @@
 
     <section id="banner"></section>
 
-    <main>
-        <h1 class="title-cursos">
-            Veja todos os cursos disponíveis na plataforma
-        </h1>
-        <p class="subtitle-cursos">
-            Expanda o seu leque de conhecimentos com as tecnologias mais utilzadas no mercado.
-        </p>
+    <main class="background-cursos">
+        <section class="top-cursos">
+            <?php
+                if(isset($_COOKIE["nome"])) {
+                    echo "<span class='message-user'> Olá, " . $_COOKIE['nome'] . "</span>";
+                }
+            ?>
+            <h1 class="title-cursos">
+                Veja todos os cursos disponíveis na plataforma
+            </h1>
+            <p class="subtitle-cursos">
+                Expanda o seu leque de conhecimentos com as tecnologias mais utilzadas no mercado.
+            </p>
+        </section>
 
         <section class="container-flex">
 
