@@ -27,7 +27,7 @@
             Veja todos os cursos disponíveis na plataforma
         </h1>
 
-        <p>
+        <p class ='text-p'>
             Expanda o seu leque de conhecimentos com as tecnologias mais utilzadas no mercado.
         </p>
 

@@ -28,7 +28,7 @@ h3{
     text-align: left;
 }
 
-p{
+.text-p{
     padding: 2%;
     font-family: var(--font-secondary);
 }

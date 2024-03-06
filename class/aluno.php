@@ -6,6 +6,8 @@
         private $nome;
         private $email;
         private $senha;
+        private $assunto;
+        private $mensagem;
 
         public function __construct(){}
 
@@ -58,6 +60,35 @@
         }
 
         //*
+
+            //* get and set from Assunto
+
+            public function getAssunto()
+            {
+                return $this->assunto;
+            }
+    
+            public function setAssunto($_assunto)
+            {
+                $this->assunto = $_assunto;
+            }
+    
+            //*
+
+         //* get and set from Mensagem
+
+        public function getMensagem()
+        {
+            return $this->mensagem;
+        }
+
+        public function setMensagem($_mensagem)
+        {
+            $this->senha = $_mensagem;
+        }
+
+        //*
+
 
         //?Função de inserir usuário
 
@@ -214,6 +245,37 @@
 
             return true;
         }
+
+        //?Função do Fale Conosco
+
+        public function faleConosco()
+        {
+            try 
+            {
+                include_once("./db/conn.php");
+                $sql = "CALL faleConosco(:nome, :email, :assunto, :mensagem)";
+
+                $data = [
+                    'nome' => $this->nome,
+                    'email' => $this->email,
+                    'assunto' => $this->assunto,
+                    'mensagem' => $this->mensagem
+                
+            ];
+
+            $statement = $conn->prepare($sql);
+            $statement->execute($data);
+
+            return true;
+        }
+
+            catch (\Exception $e)
+            {
+                return false;
+            }
+
+        }
+        //?
     }
 
 ?>
