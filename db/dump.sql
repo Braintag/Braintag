@@ -120,3 +120,19 @@ CREATE PROCEDURE pdAula
 BEGIN
 	DELETE FROM aula WHERE idAula = _id;
 END //
+
+
+DELIMITER //
+CREATE PROCEDURE faleConosco
+(
+    IN	_nome				VARCHAR(300),
+    IN _email				VARCHAR(300),
+    IN _assunto				VARCHAR(300), 
+    IN _mensagem			VARCHAR(300)
+)
+BEGIN
+	INSERT INTO faleconosco (nome, email, assunto, mensagem) 
+    VALUES (_nome, _email, _assunto, _mensagem);
+END 
+//
+
