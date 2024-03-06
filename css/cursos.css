@@ -13,28 +13,15 @@
     background-size: cover;
 }
 
-h1{
+.title-cursos {
     margin-top: 16px;
-    font-size: 25px;
+    font-size: 3rem;
     padding: 2%;
+    font-weight: 500;
     font-family: var(--font-primary);
 }
 
-
-
-h3{
-    padding: 1%;
-    font-family: var(--font-secondary);
-    text-align: left;
-}
-
-p{
-    padding: 2%;
-    font-family: var(--font-secondary);
-}
-
 .card-class-course-available a{
-
     text-align: center;
     background-color: var(--yellow-primary);
     border-radius: 10px;
@@ -113,8 +100,6 @@ p{
     font-size: 15px;
     
 }
-
-
 
 .card-class-course-unavailable a{
 

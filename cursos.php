@@ -23,10 +23,10 @@
     <section id="banner"></section>
 
     <main>
-        <h1>
+        <h1 class="title-cursos">
             Veja todos os cursos disponíveis na plataforma
         </h1>
-        <p class="subtitulo">
+        <p class="subtitle-cursos">
             Expanda o seu leque de conhecimentos com as tecnologias mais utilzadas no mercado.
         </p>
 

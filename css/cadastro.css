@@ -144,7 +144,7 @@ main h1 {
     
         border-radius: var(--border);
     
-        background-color: #0E5BCB;
+        background-color: var(--blue-form);
     }
     
     .form-cadastro form strong {
