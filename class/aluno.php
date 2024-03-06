@@ -148,17 +148,16 @@
              
              try{
                  
-                 include("../db/conn.php");
-                 $sql = "CALL psLoginAluno('$_email', '$_senha')";
+                 include("./db/conn.php");
+                 $sql = "CALL psLoginAluno('$_email', md5('$_senha'))";
                  $stmt = $conn->prepare($sql);
                  
                  $stmt->execute(); 
                  
-                 
-                 if ($user = $stmt->fetch()) //se encontrar registro
-                 {
-                     $this->nome = $user["nome"];
-                     return 1;
+                    if ($user = $stmt->fetch()) //se encontrar registro
+                    {
+                        $this->nome = $user["nome"];
+                        return 1;
                     }
                     else
                     {

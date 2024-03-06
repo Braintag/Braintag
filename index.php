@@ -121,7 +121,13 @@
 
         <section class="course-home">
             <h2>Acesse agora todos os cursos!</h2>
-            <a href="./login.php">Clique aqui para saber mais</a>
+            <?php
+                if(isset($_COOKIE["nome"])) {
+                    echo "<a href='./cursos.php'>Clique aqui para saber mais</a>";
+                } else {
+                    echo "<a href='./login.php'>Clique aqui para saber mais</a>";
+                }
+            ?>
         </section>
     </main>
 

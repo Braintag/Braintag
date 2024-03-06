@@ -31,10 +31,12 @@
     ?>
 
     <main>
-        <h1>Faça seu cadastro</h1>
-
+        
         <section class="form-cadastro">
-            <img src="assets/img/cadastro.svg" alt="">
+            <div class="cadastro-topo">
+                <h1>Faça seu cadastro</h1>
+                <img src="assets/img/cadastro.svg" alt="">
+            </div>
 
             <form method="POST">
                 <strong>Cadastre-se</strong>
@@ -52,10 +54,6 @@
                 <input type="password" id="confirmar-senha" name="confirmar-senha" minlength="5" required placeholder="Insira a sua senha novamente">
                 <span class="mensagem-erro" id="erro-senha" style="visibility: hidden">As senhas não coincidem</span>
 
-                <section class='botao'>
-                    <button type="submit" name="cadastrar" onclick="return validarSenha()">Cadastrar</button>
-                </section>
-                
                 <?php
                     if (isset($_REQUEST["cadastrar"]))
                     {
@@ -67,6 +65,11 @@
                         "<span class='mensagem-erro'>Ocorreu um erro! Tente novamente mais tarde</span>";
                     }
                 ?>
+                
+                <section class='botao'>
+                    <button type="submit" name="cadastrar" onclick="return validarSenha()">Cadastrar</button>
+                </section>
+                
                 
                 <section class="message">
                     <span>Já tem uma conta? <a href='login.php' class='redirecionar' >Entrar</a></span>

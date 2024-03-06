@@ -129,20 +129,19 @@ main img {
     main h1 {
         font-size: 3rem;
         text-align: center;
-    
-        margin-top: 2rem;
     }
 
     .form-fale-conosco {
         display: flex;
         flex-direction: row;
-        gap: 4rem;
+        justify-content: space-evenly;
+        margin: 1rem 0;
     }
 
     .fale-conosco-topo {
         display: flex;
         flex-direction: column;
-        width: 30%;
+        width: 28%;
     }
 
     .form-fale-conosco img {
@@ -155,6 +154,7 @@ main img {
     
         width: 30%;
         padding: 3rem;
+        margin: 0;
     
         border-radius: 8px;
     

@@ -90,7 +90,7 @@ CREATE PROCEDURE puAluno
     IN _senha				VARCHAR(300)
 )
 BEGIN
-	UPDATE usuario
+	UPDATE aluno
     	SET nome = _nome,
         	email = _email,
             cpf = _cpf,
@@ -99,14 +99,14 @@ BEGIN
 END //
 
 DELIMITER //
-CREATE PROCEDURE pueditarAula
+CREATE PROCEDURE puAula
 (
 	IN	_id					INT,
     IN	_nome				VARCHAR(300),
     IN _video				VARCHAR(300)
 )
 BEGIN
-	UPDATE usuario
+	UPDATE aula
     	SET nome = _nome,
         	video = _video
     WHERE idAula = _id;

@@ -9,9 +9,19 @@
         
         <nav>
             <a href="./index.php">Home</a>
-            <a href="./cursos.php">Cursos</a>
+            <?php
+                if(isset($_COOKIE["nome"])) {
+                    echo "<a href='./cursos.php'>Cursos</a>";
+                }
+            ?>
             <a href="./fale-conosco.php">Fale conosco</a>
-            <a href="./login.php">Entrar</a>
+            <?php
+                if(isset($_COOKIE["nome"])) {
+                    echo "<a href='./sair.php'>Sair</a>";
+                } else {
+                    echo "<a href='./login.php'>Entrar</a>";
+                }
+            ?>
         </nav>
     </div>
 
@@ -24,9 +34,19 @@
 
         <div class="menu-options">
             <a href="./index.php">Home</a>
-            <a href="./cursos.php">Cursos</a>
+            <?php
+                if(isset($_COOKIE["nome"])) {
+                    echo "<a href='./cursos.php'>Cursos</a>";
+                }
+            ?>
             <a href="./fale-conosco.php">Fale conosco</a>
-            <a href="./login.php">Entrar</a>
+            <?php
+                if(isset($_COOKIE["nome"])) {
+                    echo "<a href='./sair.php'>Sair</a>";
+                } else {
+                    echo "<a href='./login.php'>Entrar</a>";
+                }
+            ?>
         </div>
     </section>
 </header>

@@ -88,10 +88,12 @@ header hr {
 
 footer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 0.5rem;
 
-    height: 3rem;
+    height: 4rem;
     padding: 0 2rem;
     background-color: var(--blue-primary);
 }
@@ -101,6 +103,16 @@ footer p {
     font-size: 0.75rem;   
     text-align: center;
     color: white;    
+}
+
+.footer-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-links a {
+    font-size: 0.75rem;
+    color: white;
 }
 
 @media (min-width: 1280px) {
@@ -142,7 +154,10 @@ footer p {
     }
 
     footer {
-        height: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        height: 4rem;
     }
 
     footer p {
