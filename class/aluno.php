@@ -275,6 +275,27 @@
 
         }
         //?
+
+              //?Função de listar o usuário
+
+              public function lsCurso()
+              {
+                  try 
+                  {
+                      include("./db/conn.php");
+      
+                      $sql = "CALL lsCurso('')";
+                      $data = $conn->query($sql)->fetchAll();
+      
+                      return $data;
+                  }
+                  catch (\Exception $e)
+                      {
+                          return false;
+                      }
+              }
+                  
+               //?
     }
 
 ?>
