@@ -7,7 +7,7 @@
     width: 100%;
     height: 10rem;
 
-    background-image: url("../assets/img/cursosMobile.png");
+    background-image: url("../assets/img/cursos-desktop-600.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -151,8 +151,67 @@ p{
 
 }
 
-footer{
+@media (min-width: 1024px)
+{
+    #banner {
+        width: 100%;
+        height: 30rem;
+    
+        background-image: url("../assets/img/cursos-desktop-600.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .card-class-course-unavailable a{
+        background-color:#ACADAE ;
 
-    color: var(--white-text);
+    }
+    .subtitulo{
+        font-size: 26px;
+        font-family: var(--font-secondary);
+    }
+    h1{
+        font-size: 38px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .container-flex div{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+
+        width: 70%;
+    }
+    
+
+    
+    .container-flex div article{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .card-class-course-available{
+        width: 540px;
+        height: 500px;
+        
+    }
+    .card-class-course-unavailable{
+        width: 540px;
+        height: 500px;
+        
+    }
+
+    .cursos{
+        font-size: 20px;
+    }
+    .card-class-course-available p{
+        font-size: 20px;
+    }
 }
+
+
+
 
