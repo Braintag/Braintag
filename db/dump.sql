@@ -91,8 +91,8 @@ CREATE PROCEDURE puAluno
 )
 BEGIN
 	UPDATE aluno
-    	SET nome = _nome,
-        	email = _email,
+    SET nome = _nome,
+        email = _email,
             cpf = _cpf,
             senha = _senha
     WHERE idAluno = _id;
@@ -107,8 +107,8 @@ CREATE PROCEDURE puAula
 )
 BEGIN
 	UPDATE aula
-    	SET nome = _nome,
-        	video = _video
+    SET nome = _nome,
+        video = _video
     WHERE idAula = _id;
 END //
 
@@ -125,9 +125,9 @@ END //
 DELIMITER //
 CREATE PROCEDURE faleConosco
 (
-    IN	_nome				VARCHAR(300),
-    IN _email				VARCHAR(300),
-    IN _assunto				VARCHAR(300), 
+    IN	_nome				VARCHAR(100),
+    IN _email				VARCHAR(100),
+    IN _assunto				VARCHAR(100), 
     IN _mensagem			VARCHAR(300)
 )
 BEGIN

@@ -8,6 +8,8 @@
         private $senha;
         private $assunto;
         private $mensagem;
+        private $nivel;
+        private $decricao;
 
         public function __construct(){}
 
@@ -84,11 +86,38 @@
 
         public function setMensagem($_mensagem)
         {
-            $this->senha = $_mensagem;
+            $this->mensagem = $_mensagem;
         }
 
         //*
 
+            //* get and set from Nivel
+
+            public function getNivel()
+            {
+                return $this->nivel;
+            }
+    
+            public function setNivel($_nivel)
+            {
+                $this->nivel = $_nivel;
+            }
+    
+            //*
+
+                //* get and set from Descrição
+
+        public function getDescricao()
+        {
+            return $this->descricao;
+        }
+
+        public function setDescricao($_descricao)
+        {
+            $this->descricao = $_descricao;
+        }
+
+        //*
 
         //?Função de inserir usuário
 
@@ -278,23 +307,23 @@
 
               //?Função de listar o usuário
 
-              public function lsCurso()
-              {
-                  try 
-                  {
-                      include("./db/conn.php");
-      
-                      $sql = "CALL lsCurso('')";
-                      $data = $conn->query($sql)->fetchAll();
-      
-                      return $data;
-                  }
-                  catch (\Exception $e)
-                      {
-                          return false;
-                      }
-              }
-                  
+            public function lsCurso()
+            {
+                try 
+                {
+                    include("./db/conn.php");
+    
+                    $sql = "CALL lsCurso('')";
+                    $data = $conn->query($sql)->fetchAll();
+    
+                    return $data;
+                }
+                catch (\Exception $e)
+                    {
+                        return false;
+                    }
+            }
+                
                //?
     }
 

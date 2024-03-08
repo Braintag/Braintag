@@ -24,7 +24,7 @@
             Curso de JavaScript
         </h1>
         <div class="div-video">
-            <video controls width="100%" src="./assets/video/cursoJS.mp4"></video>
+            <video controls width="60%" poster="./assets/img/capa-html.png" src="./assets/video/cursoJS.mp4"></video>
             
             <!-- <section class="aula-curso-desktop">
     

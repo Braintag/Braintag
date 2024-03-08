@@ -159,6 +159,7 @@ main h1 {
     
     .form-cadastro form label {
         font-size: 1.25rem;
+        margin-left: 5px;
     }
 
     .form-cadastro form input {

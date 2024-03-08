@@ -39,6 +39,50 @@
 
         <section class="container-flex">
 
+                
+<?php
+
+$ls = new Aluno(); //*Criando o objeto da classe Usuário
+$lista = $ls->lsCurso();
+
+if ($lista != false)
+{
+
+        echo "  
+            <table>
+        <tr>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Nivel</th>
+        </tr>";
+
+
+        foreach ($lista as $item) 
+        {
+        echo "
+                <tr>
+                    <td> " . $item["nome"] . "</td>
+                    <td> " . $item["descricao"] . "</td>
+                    <td> " . $item["nivel"] . "</td>
+                </tr>
+        ";
+        
+        }
+
+        echo "</table>";
+
+}
+
+    else
+    {
+        echo "<p>Ocorreu um erro inesperado. Tente novamente mais tarde.</p>";
+    }
+
+
+
+?>
+
+
             <div>
                 <article class="card-class-course-available">
 
