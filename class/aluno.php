@@ -198,20 +198,37 @@
 
         public function buscarUsuario($_id)
         {
-                    include("../db/conn.php");
+            include("../db/conn.php");
 
-                    $sql = "CALL bsUsuario('$_id')";
-                    $data = $conn->query($sql)->fetchAll();
+            $sql = "CALL bsUsuario('$_id')";
+            $data = $conn->query($sql)->fetchAll();
 
-                    foreach ($data as $item) {
-                        $this->nome = $item["nome"];
-                        $this->email = $item["email"];
-                        $this->dtNascimento = $item["dtNascimento"];
-                        $this->cidade = $item["cidade"];
-                        $this->senha = $item["senha"];
-                    }
+            foreach ($data as $item) {
+                $this->nome = $item["nome"];
+                $this->email = $item["email"];
+                $this->dtNascimento = $item["dtNascimento"];
+                $this->cidade = $item["cidade"];
+                $this->senha = $item["senha"];
+            }
 
             return true;
+        }
+
+        public function listarAulas($_id)
+        {
+           try 
+           {
+                include("./db/conn.php");
+
+                $sql = "CALL psVisualizarAula('$_id')";
+                $data = $conn->query($sql)->fetchAll();
+
+                return $data;
+           } 
+           catch (Exception $e) 
+           {
+               return false;
+           }
         }
     }
 
