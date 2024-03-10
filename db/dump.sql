@@ -62,6 +62,37 @@ BEGIN
 	SELECT * FROM aluno WHERE email = _email AND senha = _senha;
 END //
 
+
+DELIMITER //
+CREATE PROCEDURE psAula(
+    IN _id		INT
+)
+BEGIN
+	SELECT * FROM aula WHERE idCurso = _id;
+END //
+
+
+DELIMITER //
+CREATE PROCEDURE psVisualizarCurso(
+  IN _idCurso	INT,
+  IN _idAula	INT
+)
+BEGIN
+    SELECT 
+        curso.nome AS nomeCurso, 
+        aula.nome AS nomeAula, 
+        aula.descricao AS descricaoAula,
+        aula.video AS videoAula
+    FROM 
+        curso
+    JOIN 
+        aula ON curso.idCurso = aula.idCurso
+    WHERE 
+        curso.idCurso = _idCurso AND aula.idAula = _idAula;
+END //
+
+
+
 DELIMITER //
 CREATE PROCEDURE pdAluno
 (

@@ -220,7 +220,24 @@
            {
                 include("./db/conn.php");
 
-                $sql = "CALL psVisualizarAula('$_id')";
+                $sql = "CALL psAula('$_id')";
+                $data = $conn->query($sql)->fetchAll();
+
+                return $data;
+           } 
+           catch (Exception $e) 
+           {
+               return false;
+           }
+        }
+
+        public function informacaoDoCurso($_idCurso, $_idAula)
+        {
+           try 
+           {
+                include("./db/conn.php");
+
+                $sql = "CALL psVisualizarCurso('$_idCurso', '$_idAula')";
                 $data = $conn->query($sql)->fetchAll();
 
                 return $data;

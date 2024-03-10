@@ -54,7 +54,7 @@
                     </p>
 
                     <div>
-                    <a href="visualizarCurso.php?idcurso=1">Acessar</a>
+                    <a href="visualizarCurso.php?cid=1&aid=1">Acessar</a>
                     </div>
                 </article>
 
