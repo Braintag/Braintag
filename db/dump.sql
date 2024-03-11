@@ -175,5 +175,14 @@ CREATE PROCEDURE faleConosco
 BEGIN
 	INSERT INTO faleconosco (nome, email, assunto, mensagem) 
     VALUES (_nome, _email, _assunto, _mensagem);
-END 
-//
+END //
+
+
+
+DELIMITER //
+CREATE PROCEDURE psVisualizarAula (
+    IN _idCurso     INT
+) 
+BEGIN
+    SELECT * FROM Aula WHERE idCurso = _idCurso;
+END //
