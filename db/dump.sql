@@ -5,41 +5,41 @@ CREATE TABLE Aluno (
     senha		    VARCHAR(50) NOT NULL
 );
 
-CREATE TABLE Aula (
-    idAula		    INT PRIMARY KEY AUTO_INCREMENT,
-    nome		    VARCHAR(100) NOT NULL,
-    video		    VARCHAR(3000) NOT NULL
-);
-
 CREATE TABLE Curso (
     idCurso 		INT PRIMARY KEY AUTO_INCREMENT,
     nome		    VARCHAR(100) NOT NULL,
     descricao 		VARCHAR(3000) NOT NULL,
-    nivel   		VARCHAR(100) NOT NULL,
-    ordem           INT NOT NULL,
-    idAula 		    INT,
-    
-    CONSTRAINT fkCursoAula FOREIGN KEY (idAula) REFERENCES aula (idAula)
+    nivel   		VARCHAR(100) NOT NULL
 );
 
-CREATE TABLE Matricula (
-    idMatricula		INT PRIMARY KEY AUTO_INCREMENT,
-    data 		    date NOT NULL,
-    idAluno		    INT,
-    idCurso		    INT,
-    
-    CONSTRAINT fkMatriculaAluno FOREIGN KEY (idAluno) REFERENCES Aluno (idAluno),
-    CONSTRAINT fkMatriculaCurso FOREIGN KEY (idCurso) REFERENCES Curso (idCurso)
-);
-
-CREATE TABLE Tema (
-    idTema          INT PRIMARY KEY AUTO_INCREMENT,
-    titulo          VARCHAR(100) NOT NULL,
+CREATE TABLE Aula (
+    idAula		    INT PRIMARY KEY AUTO_INCREMENT,
+    nome		    VARCHAR(100) NOT NULL,
+    video		    VARCHAR(3000) NOT NULL,
     ordem           INT,
     idCurso         INT,
 
-    CONSTRAINT fkTemaCurso FOREIGN KEY (idCurso) REFERENCES Curso (idCurso)
+    CONSTRAINT fkAulaCurso FOREIGN KEY (idCurso) REFERENCES Curso (idCurso)
 );
+
+-- CREATE TABLE Matricula (
+--     idMatricula		INT PRIMARY KEY AUTO_INCREMENT,
+--     data 		    date NOT NULL,
+--     idAluno		    INT,
+--     idCurso		    INT,
+    
+--     CONSTRAINT fkMatriculaAluno FOREIGN KEY (idAluno) REFERENCES Aluno (idAluno),
+--     CONSTRAINT fkMatriculaCurso FOREIGN KEY (idCurso) REFERENCES Curso (idCurso)
+-- );
+
+-- CREATE TABLE Tema (
+--     idTema          INT PRIMARY KEY AUTO_INCREMENT,
+--     titulo          VARCHAR(100) NOT NULL,
+--     ordem           INT,
+--     idCurso         INT,
+
+--     CONSTRAINT fkTemaCurso FOREIGN KEY (idCurso) REFERENCES Curso (idCurso)
+-- );
 
 DELIMITER //
 CREATE PROCEDURE piAluno
@@ -61,6 +61,37 @@ CREATE PROCEDURE psLoginAluno(
 BEGIN
 	SELECT * FROM aluno WHERE email = _email AND senha = _senha;
 END //
+
+
+DELIMITER //
+CREATE PROCEDURE psAula(
+    IN _id		INT
+)
+BEGIN
+	SELECT * FROM aula WHERE idCurso = _id;
+END //
+
+
+DELIMITER //
+CREATE PROCEDURE psVisualizarCurso(
+  IN _idCurso	INT,
+  IN _idAula	INT
+)
+BEGIN
+    SELECT 
+        curso.nome AS nomeCurso, 
+        aula.nome AS nomeAula, 
+        aula.descricao AS descricaoAula,
+        aula.video AS videoAula
+    FROM 
+        curso
+    JOIN 
+        aula ON curso.idCurso = aula.idCurso
+    WHERE 
+        curso.idCurso = _idCurso AND aula.idAula = _idAula;
+END //
+
+
 
 DELIMITER //
 CREATE PROCEDURE pdAluno
@@ -115,11 +146,12 @@ END //
 DELIMITER //
 CREATE PROCEDURE pdAula
 (
-	IN 	_id		INT
+	IN 	_id		    INT
 )
 BEGIN
 	DELETE FROM aula WHERE idAula = _id;
 END //
+
 
 
 DELIMITER //
@@ -135,4 +167,5 @@ BEGIN
     VALUES (_nome, _email, _assunto, _mensagem);
 END 
 //
+
 

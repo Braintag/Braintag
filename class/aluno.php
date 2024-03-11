@@ -258,21 +258,22 @@
 
         public function buscarUsuario($_id)
         {
-                    include("../db/conn.php");
+            include("../db/conn.php");
 
-                    $sql = "CALL bsUsuario('$_id')";
-                    $data = $conn->query($sql)->fetchAll();
+            $sql = "CALL bsUsuario('$_id')";
+            $data = $conn->query($sql)->fetchAll();
 
-                    foreach ($data as $item) {
-                        $this->nome = $item["nome"];
-                        $this->email = $item["email"];
-                        $this->dtNascimento = $item["dtNascimento"];
-                        $this->cidade = $item["cidade"];
-                        $this->senha = $item["senha"];
-                    }
+            foreach ($data as $item) {
+                $this->nome = $item["nome"];
+                $this->email = $item["email"];
+                $this->dtNascimento = $item["dtNascimento"];
+                $this->cidade = $item["cidade"];
+                $this->senha = $item["senha"];
+            }
 
             return true;
         }
+
 
         //?Função do Fale Conosco
 
@@ -303,28 +304,41 @@
             }
 
         }
-        //?
 
-              //?Função de listar o usuário
+        public function listarAulas($_id)
+        {
+           try 
+           {
+                include("./db/conn.php");
 
-            public function lsCurso()
-            {
-                try 
-                {
-                    include("./db/conn.php");
-    
-                    $sql = "CALL lsCurso('')";
-                    $data = $conn->query($sql)->fetchAll();
-    
-                    return $data;
-                }
-                catch (\Exception $e)
-                    {
-                        return false;
-                    }
-            }
-                
-               //?
+                $sql = "CALL psAula('$_id')";
+                $data = $conn->query($sql)->fetchAll();
+
+                return $data;
+           } 
+           catch (Exception $e) 
+           {
+            return false;
+           }
+        }
+
+        public function informacaoDoCurso($_idCurso, $_idAula)
+        {
+           try 
+           {
+                include("./db/conn.php");
+
+                $sql = "CALL psVisualizarCurso('$_idCurso', '$_idAula')";
+                $data = $conn->query($sql)->fetchAll();
+
+                return $data;
+           } 
+           catch (Exception $e) 
+           {
+               return false;
+           }
+        }
+
     }
 
 ?>

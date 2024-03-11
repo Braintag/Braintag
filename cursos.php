@@ -55,9 +55,12 @@
                     </p>
 
                     <div>
-                        <a href="cursoJs.php">Acessar</a>
+
+                    <a href="visualizarCurso.php?cid=1&aid=1">Acessar</a>
+
                     </div>
                 </article>
+                
 
                 <article class="card-class-course-unavailable">
                     <div>
