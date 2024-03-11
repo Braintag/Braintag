@@ -122,8 +122,8 @@ CREATE PROCEDURE puAluno
 )
 BEGIN
 	UPDATE aluno
-    	SET nome = _nome,
-        	email = _email,
+    SET nome = _nome,
+        email = _email,
             cpf = _cpf,
             senha = _senha
     WHERE idAluno = _id;
@@ -138,8 +138,8 @@ CREATE PROCEDURE puAula
 )
 BEGIN
 	UPDATE aula
-    	SET nome = _nome,
-        	video = _video
+    SET nome = _nome,
+        video = _video
     WHERE idAula = _id;
 END //
 
@@ -152,6 +152,8 @@ BEGIN
 	DELETE FROM aula WHERE idAula = _id;
 END //
 
+
+
 DELIMITER //
 CREATE PROCEDURE psVisualizarAula (
     IN _idCurso     INT
@@ -159,3 +161,19 @@ CREATE PROCEDURE psVisualizarAula (
 BEGIN
     SELECT * FROM Aula WHERE idCurso = _idCurso;
 END //
+
+
+
+DELIMITER //
+CREATE PROCEDURE faleConosco
+(
+    IN	_nome				VARCHAR(100),
+    IN _email				VARCHAR(100),
+    IN _assunto				VARCHAR(100), 
+    IN _mensagem			VARCHAR(300)
+)
+BEGIN
+	INSERT INTO faleconosco (nome, email, assunto, mensagem) 
+    VALUES (_nome, _email, _assunto, _mensagem);
+END 
+//

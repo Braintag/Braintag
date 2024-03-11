@@ -6,6 +6,10 @@
         private $nome;
         private $email;
         private $senha;
+        private $assunto;
+        private $mensagem;
+        private $nivel;
+        private $decricao;
 
         public function __construct(){}
 
@@ -55,6 +59,62 @@
         public function setSenha($_senha)
         {
             $this->senha = $_senha;
+        }
+
+        //*
+
+            //* get and set from Assunto
+
+            public function getAssunto()
+            {
+                return $this->assunto;
+            }
+    
+            public function setAssunto($_assunto)
+            {
+                $this->assunto = $_assunto;
+            }
+    
+            //*
+
+         //* get and set from Mensagem
+
+        public function getMensagem()
+        {
+            return $this->mensagem;
+        }
+
+        public function setMensagem($_mensagem)
+        {
+            $this->mensagem = $_mensagem;
+        }
+
+        //*
+
+            //* get and set from Nivel
+
+            public function getNivel()
+            {
+                return $this->nivel;
+            }
+    
+            public function setNivel($_nivel)
+            {
+                $this->nivel = $_nivel;
+            }
+    
+            //*
+
+                //* get and set from Descrição
+
+        public function getDescricao()
+        {
+            return $this->descricao;
+        }
+
+        public function setDescricao($_descricao)
+        {
+            $this->descricao = $_descricao;
         }
 
         //*
@@ -213,6 +273,58 @@
 
             return true;
         }
+
+        //?Função do Fale Conosco
+
+        public function faleConosco()
+        {
+            try 
+            {
+                include_once("./db/conn.php");
+                $sql = "CALL faleConosco(:nome, :email, :assunto, :mensagem)";
+
+                $data = [
+                    'nome' => $this->nome,
+                    'email' => $this->email,
+                    'assunto' => $this->assunto,
+                    'mensagem' => $this->mensagem
+                
+            ];
+
+            $statement = $conn->prepare($sql);
+            $statement->execute($data);
+
+            return true;
+        }
+
+            catch (\Exception $e)
+            {
+                return false;
+            }
+
+        }
+        //?
+
+              //?Função de listar o usuário
+
+            public function lsCurso()
+            {
+                try 
+                {
+                    include("./db/conn.php");
+    
+                    $sql = "CALL lsCurso('')";
+                    $data = $conn->query($sql)->fetchAll();
+    
+                    return $data;
+                }
+                catch (\Exception $e)
+                    {
+                        return false;
+                    }
+            }
+                
+               //?
 
         public function listarAulas($_id)
         {

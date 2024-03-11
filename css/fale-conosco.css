@@ -46,7 +46,7 @@ main img {
 .form-fale-conosco form label {
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
-    margin-left: 1rem;
+    margin-left: 0.4rem;
     margin-bottom: 0.4rem;
 
     color: #fff;
@@ -202,4 +202,11 @@ main img {
         width: 20%;
         
     }
+
+    .mensagem-sucesso {
+        color: var(--yellow-primary);
+        text-align: center;
+        margin-left: -300px;
+    }
+    
     }

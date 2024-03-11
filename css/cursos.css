@@ -36,8 +36,10 @@
     font-family: var(--font-primary);
 }
 
+
 .subtitle-cursos {
     font-size: 1rem;
+
 }
 
 .card-class-course-available a{
@@ -167,23 +169,54 @@
 
     }
     .subtitle-cursos{
-        font-size: 26px;
+        font-size: 20px;
         font-family: var(--font-secondary);
     }
 
     .title-cursos{
-        font-size: 38px;
+        font-size: 28px;
         padding-top: 0;
         padding-bottom: 0;
     }
 
-    .container-flex div{
-        display: flex;
+
+    .container-flex{
+        display: grid;
         justify-content: center;
         flex-direction: row;
-        flex-wrap: wrap;
+        align-items: center;
+        
+        gap: 50px;
+        grid-column: 100px;
+        margin: 0 auto;
 
-        width: 100%;
+        
+    }
+    
+
+
+    .container-flex div{
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        
+
+    }
+    
+    .card-class-course-available, .card-class-course-unavailable{
+
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        color: var(--white-text);
+        padding: 3%;
+        gap: 20px;
+        width: 80%;
+        border-radius: 10px;
+        
     }
     
 
@@ -193,25 +226,15 @@
         justify-content: center;
         align-items: center;
         
-        width: 40%;
-    }
+        height: 30rem;
 
-    .card-class-course-available{
-        width: 540px;
-        height: 500px;
-        
-    }
-    .card-class-course-unavailable{
-        width: 540px;
-        height: 500px;
-        
     }
 
     .cursos{
-        font-size: 20px;
+        font-size: 15px;
     }
     .card-class-course-available p{
-        font-size: 20px;
+        font-size: 15px;
     }
 }
 

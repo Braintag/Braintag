@@ -1,3 +1,6 @@
+<?php
+        include_once('./class/aluno.php')
+        ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -41,13 +44,35 @@
                 <input type="text" name="assunto" minlength="5" required placeholder="Insira o assunto">
 
                 <label>Mensagem</label>
-                <input type="text" name="Mensagem" minlength="5" required placeholder="Insira a sua mensagem">
+                <input type="text" name="mensagem" minlength="5" required placeholder="Insira a sua mensagem">
+
+                <?php
+        if ( isset($_REQUEST["enviarForm"]) ) 
+            {
+                $f = new Aluno();
+                $f->create($_REQUEST["nome"], $_REQUEST["email"], $_REQUEST["assunto"], $_REQUEST["mensagem"]); 
+                
+                echo $f->faleConosco() == true?
+                        "<p class='mensagem-sucesso'>Mensagem enviada!</p>" :
+                        "<p class='mensagem-erro'>Ocorreu um erro!</p>";
+            }
+        ?>
+
 
                 <section class='botao'>
-                    <button type="submit" name="inserir">Enviar</button>
+                    <button type="submit" name="enviarForm">Enviar</button>
                 </section>
+
+
             </form>
         </div>
+
+
+     
+    </form>
+
+
+
     <div class="suport-fale-conosco">
             <p class="central-suport">Central de atendimento</p>
             <p class="clock-suport">(Seg á sex das 8h ás 18h)</p>
