@@ -1,8 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 main h1 {
     font-family: var(--font-primary);
     font-size: 2.5rem;
@@ -81,14 +76,14 @@ main h1 {
     color: var(--white-text);
 }
 
-.form-lembrar input[type=checkbox] {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-
-    width: 20px;
-    height: 20px;
+.form-lembrar input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
     border-radius: 3rem;
+}
+
+.form-lembrar input[type="checkbox"]:checked {
+    accent-color: var(--yellow-primary);
 }
 
 .form-lembrar label {
@@ -178,10 +173,6 @@ main h1 {
 
     .form-login form label {
         font-size: 1.25rem;
-    }
-
-    .form-login form input {
-        margin-bottom: 1rem;
     }
 
     .form-login form input::placeholder {
