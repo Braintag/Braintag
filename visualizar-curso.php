@@ -38,7 +38,7 @@
                 }
             
                 echo "
-                    <div>
+                    <div class='info-curso'>
                         <h1>Curso de $nome</h1>
 
                         <div class='div-video'>
@@ -46,14 +46,14 @@
                         </div>
                     </div>
 
-                    <section class='text-curso'>
+                    <section class='info-aula'>
                         <h2>$nomeAula</h2>
                         <p>$descricao</p>
                     </section>
                 ";
             }
 
-                echo "<section class ='aula-curso'>";
+                echo "<section class ='listagens-aulas'>";
 
                 if ($listagensDeAulas != 0) {
                     foreach($listagensDeAulas as $aula) {
@@ -64,7 +64,7 @@
                         $idCurso = $aula["idCurso"];
 
                         echo "
-                            <div class ='div-aula1'>
+                            <div class ='aulas-links'>
                                 <a href='./visualizar-curso.php?cid=$idCurso&aid=$idAula'>$nome</a>
                             </div>
                         ";
