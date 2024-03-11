@@ -40,75 +40,44 @@
         <section class="container-flex">
 
             <div>
-                <article class="card-class-course-available">
 
-                    <div>
-                        <img src="assets/img/js-white.png" alt="">
-                    </div>
+            <?php
+        include_once('./class/aluno.php')
+    ?>
 
-                    <h3>
-                        Curso de JavaScript
-                    </h3>
-                    <p class="cursos">
-                        Um curso abrangente sobre a linguagem de programação JavaScript, cobrindo desde os fundamentos
-                        até tópicos avançados como manipulação do DOM e programação orientada a objetos.
-                    </p>
 
-                    <div>
+                    <?php
 
-                    <a href="visualizarCurso.php?cid=1&aid=1">Acessar</a>
+                                $aluno = new Aluno();
 
-                    </div>
-                </article>
+                                $idCurso = 1;
+
+                                $curso = $aluno->listarCurso();
+
+                                if ($curso != 0)
+                                {
+
+                                    $article = array(
+                                        array("img" => "image1.jpg", "title" => "Título 1", "content" => "Conteúdo 1"),
+                                        array("img" => "image2.jpg", "title" => "Título 2", "content" => "Conteúdo 2"),
+                                    );
+
+                                    foreach ($curso as $article) {
+                                        echo '<article>';
+                                        echo '<div>';
+                                        echo '<img src="' . $article['imagem'] . '" alt="Imagem">';
+                                        echo '<h3>' . $article['nome'] . '</h3>';
+                                        echo '<p>' . $article['descricao']. '</p>';
+                                        echo '</div>';
+                                        echo '</article>';
+                                    
+                                    }
+                                }
+                            ?>
+
                 
 
-                <article class="card-class-course-unavailable">
-                    <div>
-                        <img src="assets/img/Java-white.png" alt="">
-                    </div>
-                    <h3>
-                        Curso de Java
-                    </h3>
-                    <p class="cursos">
-                        Este curso ensina os conceitos fundamentais e avançados da linguagem de programação Java,
-                        abordando desde sintaxe básica até desenvolvimento Android e aplicativos corporativos.
-                    </p>
-                    <div>
-                        <a href="">Indisponível</a>
-                    </div>
-                </article>
-
-                <article class="card-class-course-unavailable">
-                    <div>
-                        <img src="assets/img/Desenvolvimento.png" alt="">
-                    </div>
-                    <h3>
-                        Desenvolvimento Web
-                    </h3>
-                    <p class="cursos">
-                        Um curso completo que abrange HTML, CSS, JavaScript e desenvolvimento do lado do servidor com
-                        tecnologias como PHP, Python ou Node.js, além de frameworks populares como Django e AngularJS.
-                    </p>
-                    <div>
-                        <a href="">Indisponível</a>
-                    </div>
-                </article>
-
-                <article class="card-class-course-unavailable">
-                    <div>
-                        <img src="assets/img/Mysql-white.png" alt="">
-                    </div>
-                    <h3>
-                        Curso de MySql
-                    </h3>
-                    <p class="cursos">
-                        Focado no sistema de gerenciamento de banco de dados MySQL, este curso ensina design de banco de
-                        dados, consultas SQL, otimização e integração com várias linguagens de programação para
-                        desenvolvimento web. </p>
-                    <div>
-                        <a href="">Indisponível</a>
-                    </div>
-                </article>
+                
             </div>
         </section>
 
