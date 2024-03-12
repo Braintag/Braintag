@@ -51,7 +51,7 @@ main img {
 
     color: #fff;
 }
-.form-fale-conosco form input {
+.form-fale-conosco form input, .form-fale-conosco form textarea {
     padding: 0.8rem;
     margin-bottom: 0.8rem;
 
@@ -60,11 +60,14 @@ main img {
 
     background-color: #fff;
 }
-.form-fale-conosco form input::placeholder {
+.form-fale-conosco form input::placeholder, .form-fale-conosco form textarea::placeholder {
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
 
     color: #646363;
+}
+.form-fale-conosco form textarea {
+    resize: none;
 }
 .form-fale-conosco form .botao {
     display: flex;

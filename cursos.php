@@ -38,49 +38,40 @@
         </section>
 
         <section class="container-flex">
-
             <div>
+                <?php 
+                    include_once('./class/aluno.php')
+                ?>
 
-            <?php
-        include_once('./class/aluno.php')
-    ?>
+                <?php
+                    $aluno = new Aluno();
 
+                    $cursos = $aluno->listarCurso();
 
-                    <?php
-
-                                $aluno = new Aluno();
-
-                                $idCurso = 1;
-
-                                $curso = $aluno->listarCurso();
-
-                                if ($curso != 0)
-                                {
-
-                                    $article = array(
-                                        array("img" => "image1.jpg", "title" => "Título 1", "content" => "Conteúdo 1"),
-                                        array("img" => "image2.jpg", "title" => "Título 2", "content" => "Conteúdo 2"),
-                                    );
-
-                                    foreach ($curso as $article) {
-                                        echo '<article>';
-                                        echo '<div>';
-                                        echo '<img src="' . $article['imagem'] . '" alt="Imagem">';
-                                        echo '<h3>' . $article['nome'] . '</h3>';
-                                        echo '<p>' . $article['descricao']. '</p>';
-                                        echo '</div>';
-                                        echo '</article>';
-                                    
-                                    }
-                                }
-                            ?>
-
-                
-
-                
+                    if ($cursos != 0)
+                    {
+                        foreach ($cursos as $curso) {
+                            $idCurso = $curso['idCurso'];
+                            $href = $curso['ativo'] ? "./aula-curso.php?cid={$idCurso}&aid=1" : "";
+                            
+                            echo "<article class='" . ($curso['ativo'] ? 'card-class-course-available' : 'card-class-course-unavailable') . "'>";
+                            
+                            // if($curso['ativo'] === '1') {
+                            //     echo "<article class='card-class-course-available'>";
+                            // } else {
+                            //     echo "<article class='card-class-course-unavailable'>";
+                            // }
+                            echo '<img src="' . $curso['imagem'] . '" alt="Imagem">';
+                            echo '<h3> Curso de ' . $curso['nome'] . '</h3>';
+                            echo '<p>' . $curso['descricao']. '</p>';
+                            echo "<a href='$href'>Acessar</a>";
+                            echo '</article>';
+                        
+                        }
+                    }
+                ?>
             </div>
         </section>
-
     </main>
 
     <?php

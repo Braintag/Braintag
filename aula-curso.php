@@ -12,7 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
     <title>Visualização do Curso</title>
-    <link rel="stylesheet" href="css/visualizar-curso.css">
+    <link rel="stylesheet" href="css/aula-curso.css">
 </head>
 
 <body>
@@ -28,21 +28,21 @@
 
             $informacaoDoCurso = $aluno->informacaoDoCurso($_GET["cid"], $_GET["aid"]);
             $listagensDeAulas = $aluno->listarAulas($_GET["cid"]);
-
+      
             if ($informacaoDoCurso != 0) {
                 foreach($informacaoDoCurso as $info) {
                     $nome = $info["nomeCurso"];
                     $nomeAula = $info["nomeAula"];
                     $descricao = $info["descricaoAula"];
-                    $video = $info["videoAula"];
+                    $link = $info["linkAula"];
                 }
-            
+
                 echo "
                     <div class='info-curso'>
                         <h1>Curso de $nome</h1>
 
                         <div class='div-video'>
-                            <iframe controls src='$video'></iframe>
+                            <iframe controls src='$link'></iframe>
                         </div>
                     </div>
 
@@ -59,13 +59,11 @@
                     foreach($listagensDeAulas as $aula) {
                         $idAula = $aula["idAula"];
                         $nome = $aula["nome"];
-                        $video = $aula["video"];
-                        $ordem = $aula["ordem"];
                         $idCurso = $aula["idCurso"];
 
                         echo "
                             <div class ='aulas-links'>
-                                <a href='./visualizar-curso.php?cid=$idCurso&aid=$idAula'>$nome</a>
+                                <a href='./aula-curso.php?cid=$idCurso&aid=$idAula'>$nome</a>
                             </div>
                         ";
                     }
