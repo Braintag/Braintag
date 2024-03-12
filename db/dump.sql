@@ -8,38 +8,28 @@ CREATE TABLE Aluno (
 CREATE TABLE Curso (
     idCurso 		INT PRIMARY KEY AUTO_INCREMENT,
     nome		    VARCHAR(100) NOT NULL,
-    descricao 		VARCHAR(3000) NOT NULL,
-    nivel   		VARCHAR(100) NOT NULL
+    nivel   		VARCHAR(100) NOT NULL,
+    descricao 		VARCHAR(3000) NOT NULL
 );
 
 CREATE TABLE Aula (
     idAula		    INT PRIMARY KEY AUTO_INCREMENT,
     nome		    VARCHAR(100) NOT NULL,
-    video		    VARCHAR(3000) NOT NULL,
-    ordem           INT,
+    link		    VARCHAR(3000) NOT NULL,
     idCurso         INT,
 
     CONSTRAINT fkAulaCurso FOREIGN KEY (idCurso) REFERENCES Curso (idCurso)
 );
 
--- CREATE TABLE Matricula (
---     idMatricula		INT PRIMARY KEY AUTO_INCREMENT,
---     data 		    date NOT NULL,
---     idAluno		    INT,
---     idCurso		    INT,
-    
---     CONSTRAINT fkMatriculaAluno FOREIGN KEY (idAluno) REFERENCES Aluno (idAluno),
---     CONSTRAINT fkMatriculaCurso FOREIGN KEY (idCurso) REFERENCES Curso (idCurso)
--- );
+CREATE TABLE faleConosco (
+    idFaleConosco 	INT PRIMARY KEY AUTO_INCREMENT,
+    nome 		    VARCHAR(100) NOT NULL,
+    email		    VARCHAR(100) NOT NULL,
+    assunto		    VARCHAR(100) NOT NULL,
+    mensagem 		VARCHAR(3000) NOT NULL
+);
 
--- CREATE TABLE Tema (
---     idTema          INT PRIMARY KEY AUTO_INCREMENT,
---     titulo          VARCHAR(100) NOT NULL,
---     ordem           INT,
---     idCurso         INT,
 
---     CONSTRAINT fkTemaCurso FOREIGN KEY (idCurso) REFERENCES Curso (idCurso)
--- );
 
 DELIMITER //
 CREATE PROCEDURE piAluno
@@ -53,6 +43,7 @@ BEGIN
     VALUES (_nome, _email, _senha);
 END //
 
+
 DELIMITER //
 CREATE PROCEDURE psLoginAluno(
     IN  _email  VARCHAR(100),
@@ -64,11 +55,9 @@ END //
 
 
 DELIMITER //
-CREATE PROCEDURE psAula(
-    IN _id		INT
-)
+CREATE PROCEDURE psAula()
 BEGIN
-	SELECT * FROM aula WHERE idCurso = _id;
+	SELECT * FROM aula;
 END //
 
 
@@ -82,74 +71,10 @@ BEGIN
         curso.nome AS nomeCurso, 
         aula.nome AS nomeAula, 
         aula.descricao AS descricaoAula,
-        aula.video AS videoAula
-    FROM 
-        curso
-    JOIN 
-        aula ON curso.idCurso = aula.idCurso
-    WHERE 
-        curso.idCurso = _idCurso AND aula.idAula = _idAula;
-END //
-
-
-
-DELIMITER //
-CREATE PROCEDURE pdAluno
-(
-	IN 	_id		INT
-)
-BEGIN
-	DELETE FROM aluno WHERE idAluno = _id;
-END //
-
-DELIMITER //
-CREATE PROCEDURE pdCurso
-(
-	IN 	_id		INT
-)
-BEGIN
-	DELETE FROM curso WHERE idCurso = _id;
-END //
-
-DELIMITER //
-CREATE PROCEDURE puAluno
-(
-	IN	_id					INT,
-    IN	_nome				VARCHAR(300),
-    IN _email				VARCHAR(300),
-    IN _cpf					DECIMAL(11), 
-    IN _senha				VARCHAR(300)
-)
-BEGIN
-	UPDATE aluno
-    SET nome = _nome,
-        email = _email,
-            cpf = _cpf,
-            senha = _senha
-    WHERE idAluno = _id;
-END //
-
-DELIMITER //
-CREATE PROCEDURE puAula
-(
-	IN	_id					INT,
-    IN	_nome				VARCHAR(300),
-    IN _video				VARCHAR(300)
-)
-BEGIN
-	UPDATE aula
-    SET nome = _nome,
-        video = _video
-    WHERE idAula = _id;
-END //
-
-DELIMITER //
-CREATE PROCEDURE pdAula
-(
-	IN 	_id		    INT
-)
-BEGIN
-	DELETE FROM aula WHERE idAula = _id;
+        aula.link AS linkAula
+    FROM curso
+    JOIN aula ON curso.idCurso = aula.idCurso
+    WHERE curso.idCurso = _idCurso AND aula.idAula = _idAula;
 END //
 
 
@@ -170,19 +95,9 @@ CREATE PROCEDURE faleConosco
     IN	_nome				VARCHAR(100),
     IN _email				VARCHAR(100),
     IN _assunto				VARCHAR(100), 
-    IN _mensagem			VARCHAR(300)
+    IN _mensagem			VARCHAR(3000)
 )
 BEGIN
-	INSERT INTO faleconosco (nome, email, assunto, mensagem) 
+	INSERT INTO faleConosco (nome, email, assunto, mensagem) 
     VALUES (_nome, _email, _assunto, _mensagem);
-END //
-
-
-
-DELIMITER //
-CREATE PROCEDURE psVisualizarAula (
-    IN _idCurso     INT
-) 
-BEGIN
-    SELECT * FROM Aula WHERE idCurso = _idCurso;
 END //
