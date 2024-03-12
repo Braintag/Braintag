@@ -64,7 +64,8 @@
                             echo '<img src="' . $curso['imagem'] . '" alt="Imagem">';
                             echo '<h3> Curso de ' . $curso['nome'] . '</h3>';
                             echo '<p>' . $curso['descricao']. '</p>';
-                            echo "<a href='$href'>Acessar</a>";
+                            echo "<a href='$href'>" . ($curso['ativo'] ? 'Acessar' : 'Indisponível') . "</a>";
+
                             echo '</article>';
                         
                         }

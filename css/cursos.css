@@ -54,6 +54,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
+
 }
 
 
@@ -100,14 +102,20 @@
     margin-bottom: 20px;
 }
 
+
+h3{
+    text-align: center;
+}
 .card-class-course-available img{
 
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 2%;
     width: 153px;
     height: 153px;
     color: var(--bg-white);
+    margin: 0 auto;
 
 }
 
@@ -121,8 +129,8 @@
 .card-class-course-unavailable a{
 
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center!important;
+    align-items: center!important;
     background-color: var(--white-transparent);
     color: rgba(0, 0, 0, 0.50);
     text-decoration: none;
@@ -131,6 +139,8 @@
     width: 192px;
     height: 35px;
     font-family: var(--font-primary);
+    text-align: center;
+    margin: 0 auto;
 
     
 
@@ -146,6 +156,7 @@
 
     display: flex;
     justify-content: center;
+    margin: 0 auto;
     padding: 2%;
     width: 153px;
     height: 153px;
@@ -166,6 +177,8 @@
     }
     .card-class-course-unavailable a{
         background-color:#ACADAE ;
+        
+
 
     }
     .subtitle-cursos{
@@ -212,7 +225,7 @@
         flex-direction: column;
         text-align: left;
         color: var(--white-text);
-        padding: 3%;
+        padding: 2%;
         gap: 20px;
         width: 80%;
         border-radius: 10px;
@@ -233,6 +246,11 @@
     .cursos{
         font-size: 15px;
     }
+
+    .card-class-course-available a{
+        text-align: center;
+    }
+
     .card-class-course-available p{
         font-size: 15px;
     }

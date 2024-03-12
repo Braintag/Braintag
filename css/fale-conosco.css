@@ -126,7 +126,10 @@ main img {
 .card-suport img{
     width: 30px;
     height: 30px;
+    
 }
+
+
 
 @media (min-width: 1024px) {
     main h1 {
@@ -209,6 +212,8 @@ main img {
     .mensagem-sucesso {
         color: var(--yellow-primary);
         text-align: center;
+  
+        
         
     }
     

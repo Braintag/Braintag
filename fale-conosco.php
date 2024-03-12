@@ -18,21 +18,22 @@
     <script src="assets/js/menu.js"></script>
 
 </head>
+
 <body>
-    
-<?php
+
+    <?php
         include_once('./components/header.php')
         ?>
-        <main>
-            
-            <div class="form-fale-conosco">
-                <div class="fale-conosco-topo">
-                    <h1>Fale Conosco</h1>
-                    <img src="assets/img/contato.svg" alt="">
-                </div>
+    <main>
+
+        <div class="form-fale-conosco">
+            <div class="fale-conosco-topo">
+                <h1>Fale Conosco</h1>
+                <img src="assets/img/contato.svg" alt="">
+            </div>
 
             <form method="POST">
-            <strong>Entre em contato</strong> 
+                <strong>Entre em contato</strong>
 
                 <label>Nome</label>
                 <input type="text" name="nome" minlength="3" required placeholder="Insira o seu nome completo">
@@ -44,48 +45,49 @@
                 <input type="text" name="assunto" required placeholder="Insira o assunto">
 
                 <label>Mensagem</label>
-                <textarea type="text" name="mensagem" rows="4" required placeholder="Insira a sua mensagem"></textarea>
+                <textarea name="mensagem" rows="4" required placeholder="Insira a sua mensagem"></textarea>
 
                 <?php
-        if ( isset($_REQUEST["enviarForm"]) ) 
-            {
-                $f = new Aluno();
-                $f->create($_REQUEST["nome"], $_REQUEST["email"], $_REQUEST["assunto"], $_REQUEST["mensagem"]); 
+                    if ( isset($_REQUEST["enviarForm"]) ) 
+                        {
+                            $f = new Aluno();
+                            $f->create($_REQUEST["nome"], $_REQUEST["email"], ''); 
 
-                echo $f->faleConosco() == true ?
-                        "<p class='mensagem-sucesso'>Mensagem enviada!</p>" :
-                        "<p class='mensagem-erro'>Ocorreu um erro!</p>";
-            }
-        ?>
+                            echo $f->faleConosco( $_REQUEST["assunto"], $_REQUEST["mensagem"]) == true ?
+                                    "<p class='mensagem-sucesso'>Mensagem enviada!</p>" :
+                                    "<p class='mensagem-erro'>Ocorreu um erro!</p>";
+                        }
+                ?>
 
                 <section class='botao'>
                     <button type="submit" name="enviarForm">Enviar</button>
                 </section>
 
 
+
             </form>
         </div>
 
 
-     
-    </form>
+
+        </form>
 
 
 
-    <div class="suport-fale-conosco">
+        <div class="suport-fale-conosco">
             <p class="central-suport">Central de atendimento</p>
             <p class="clock-suport">(Seg á sex das 8h ás 18h)</p>
 
-        <div class="card-suport">
+            <div class="card-suport">
                 <img src="assets/img/Telefone.png" alt="">
                 <p>(13)99622-9144</p>
-        </div>
+            </div>
 
-        <div class="card-suport">
+            <div class="card-suport">
                 <img src="assets/img/email.png" alt="">
                 <p>suporte@braintag.com.br</p>
+            </div>
         </div>
-    </div>
     </main>
 
     <?php

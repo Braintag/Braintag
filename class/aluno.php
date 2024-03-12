@@ -122,26 +122,26 @@
         }
     }
     
-    public function faleConosco() {
-        try {
+    public function faleConosco($_assunto, $_mensagem) {
+        // try {
             include_once("./db/conn.php");
-            $sql="CALL faleConosco(:nome, :email, :assunto, :mensagem)";
+            $sql="CALL pifaleConosco(:nome, :email, :assunto, :mensagem)";
 
             $data=[ 'nome'=>$this->nome,
             'email'=>$this->email,
-            'assunto'=>$this->assunto,
-            'mensagem'=>$this->mensagem,
+            'assunto'=> $_assunto,
+            'mensagem'=> $_mensagem,
         ];
 
             $statement=$conn->prepare($sql);
             $statement->execute($data);
 
             return true;
-        }
+        // }
 
-        catch (\Exception $e) {
-            return false;
-        }
+        // catch (\Exception $e) {
+        //     return false;
+        // }
     }
 
     public function informacaoDoCurso($_idCurso, $_idAula) {

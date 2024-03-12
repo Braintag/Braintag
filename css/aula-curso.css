@@ -71,6 +71,10 @@
     transition: ease-in-out 200ms;
 }
 
+.men{
+    color: var(--blue-primary);
+}
+
 .aulas-links a {
     display: flex;
     align-items: center;

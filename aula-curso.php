@@ -44,6 +44,13 @@
                         <div class='div-video'>
                             <iframe controls src='$link'></iframe>
                         </div>
+
+                        <div>
+                            <p class = 'men'>
+                                Esse vídeo foi usado como um mero exemplo para o nosso projeto, todos os direitos reservados do Curso em Video e de seu proprietário Gustavo Guanabara.
+                            </p>
+                        </div>
+
                     </div>
 
                     <section class='info-aula'>
