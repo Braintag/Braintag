@@ -1,5 +1,5 @@
 <?php
-        include_once('./class/aluno.php')
+        include('./class/aluno.php')
         ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -41,23 +41,22 @@
                 <input type="email" name="email" required placeholder="Insira o seu email">
 
                 <label>Assunto</label>
-                <input type="text" name="assunto" minlength="5" required placeholder="Insira o assunto">
+                <input type="text" name="assunto" required placeholder="Insira o assunto">
 
                 <label>Mensagem</label>
-                <input type="text" name="mensagem" minlength="5" required placeholder="Insira a sua mensagem">
+                <textarea type="text" name="mensagem" rows="4" required placeholder="Insira a sua mensagem"></textarea>
 
                 <?php
         if ( isset($_REQUEST["enviarForm"]) ) 
             {
                 $f = new Aluno();
                 $f->create($_REQUEST["nome"], $_REQUEST["email"], $_REQUEST["assunto"], $_REQUEST["mensagem"]); 
-                
-                echo $f->faleConosco() == true?
+
+                echo $f->faleConosco() == true ?
                         "<p class='mensagem-sucesso'>Mensagem enviada!</p>" :
                         "<p class='mensagem-erro'>Ocorreu um erro!</p>";
             }
         ?>
-
 
                 <section class='botao'>
                     <button type="submit" name="enviarForm">Enviar</button>
