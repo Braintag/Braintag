@@ -18,6 +18,7 @@ main h1 {
 
 .form-login img {
     width: 60%;
+    margin-left: 60px;
 }
 
 .form-login form strong {
@@ -147,6 +148,7 @@ main h1 {
 
     .form-login img {
         width: 100%;
+        margin-left: -20px;
     }
 
     .form-login form {
@@ -173,6 +175,7 @@ main h1 {
 
     .form-login form label {
         font-size: 1.25rem;
+        margin-left: 2px;
     }
 
     .form-login form input::placeholder {

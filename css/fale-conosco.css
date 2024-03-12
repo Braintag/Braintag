@@ -209,7 +209,7 @@ main img {
     .mensagem-sucesso {
         color: var(--yellow-primary);
         text-align: center;
-        margin-left: -300px;
+        
     }
     
     }
