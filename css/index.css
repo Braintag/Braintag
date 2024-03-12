@@ -425,3 +425,18 @@
         font-size: 1.5rem;
     }
 }
+
+@media (width: 1280px) and (height: 1024px) {
+    .card-class-home {    
+        width: 26%;
+        height: 22rem;
+        padding: 2%;
+    }
+
+    .course-home a {
+        width: 30%;
+        padding: 1%;
+
+        font-size: 1.5rem;
+    }
+}

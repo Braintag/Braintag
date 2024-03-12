@@ -125,10 +125,8 @@ main img {
 }
 .card-suport img{
     width: 30px;
-    height: 30px;
-    
+    height: 30px; 
 }
-
 
 
 @media (min-width: 1024px) {
@@ -141,13 +139,13 @@ main img {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        margin: 1rem 0;
+        margin: 4rem 0;
     }
 
     .fale-conosco-topo {
         display: flex;
         flex-direction: column;
-        width: 28%;
+        width: 30%;
     }
 
     .form-fale-conosco img {
@@ -212,9 +210,26 @@ main img {
     .mensagem-sucesso {
         color: var(--yellow-primary);
         text-align: center;
-  
-        
-        
     }
+}
+
+@media (width: 1280px) and (height: 1024px) {
+    .fale-conosco-topo {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+    }
+
+    .form-fale-conosco form {
+        display: flex;
+        flex-direction: column;
     
+        width: 40%;
+        padding: 3rem;
+        margin: 0;
+    
+        border-radius: 8px;
+    
+        background-color: #0E5BCB;
     }
+}

@@ -207,3 +207,23 @@ main h1 {
         font-size: 1rem;
     }
 }
+
+@media (width: 1280px) and (height: 1024px) {
+    .login-topo {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+    }
+
+    .form-login form {
+        display: flex;
+        flex-direction: column;
+
+        width: 40%;
+        padding: 3rem;
+
+        border-radius: var(--border);
+
+        background-color: var(--blue-form);
+    }
+}

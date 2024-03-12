@@ -192,3 +192,24 @@ main h1 {
         margin: 0;
     }
 }
+
+@media (width: 1280px) and (height: 1024px) {
+    .cadastro-topo {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+    
+    .form-cadastro form {
+        display: flex;
+        flex-direction: column;
+    
+        width: 40%;
+        padding: 3rem;
+        margin: 0;
+    
+        border-radius: var(--border);
+    
+        background-color: var(--blue-form);
+    }
+}
