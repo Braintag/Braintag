@@ -98,7 +98,7 @@
                     
                     <h3>Aulas Gravadas</h3>
                     
-                    <p>Estude no seu ritmo com as aulas  disponibilizadas na nossa plataforma a qualquer momento</p>
+                    <p>Estude no seu ritmo com as aulas disponibilizadas na nossa plataforma a qualquer momento</p>
                 </article>
                 
                 <article class="card-class-home">

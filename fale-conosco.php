@@ -76,11 +76,11 @@
 
         <div class="suport-fale-conosco">
             <p class="central-suport">Central de atendimento</p>
-            <p class="clock-suport">(Seg á sex das 8h ás 18h)</p>
+            <p class="clock-suport">(Seg a sex das 8h ás 18h)</p>
 
             <div class="card-suport">
                 <img src="assets/img/Telefone.png" alt="">
-                <p>(13)99622-9144</p>
+                <p>(13)3210-9876</p>
             </div>
 
             <div class="card-suport">
