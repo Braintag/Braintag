@@ -71,9 +71,9 @@ header hr {
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
     gap: 4rem;
-    
-    margin-top: 7.5rem;
+    height: calc(100% - 12rem);
 }
 
 .menu-options a {
