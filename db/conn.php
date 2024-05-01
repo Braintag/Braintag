@@ -1,4 +1,7 @@
 <?php
+
+    require_once 'anti_sql_injection.php'
+
     $dbHost     = "localhost";
     $dbUsername = "root";
     $dbPassword = "";
